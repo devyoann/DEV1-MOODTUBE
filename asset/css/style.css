@@ -1,29 +1,43 @@
 
 /* MAIN */
 
-body{
-    background-color: whitesmoke;
-    text-transform: uppercase;
-}
-
-header svg{
-    width: 300px;
-}
-
-header {
-    margin-top: 30px;
-    margin-left: 40px;
-}
-
 @font-face {
     font-family: "Avenir Next";
     src: url("asset/font/Avenir-Next.ttc");
 }
 
+body{
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+header svg{
+    width: 300px;
+    margin-top: 30px
+}
+
+header {
+    margin: 0px 40px;
+}
+
+#clock {
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+#time, #date {
+    display: inline-block;
+    font-family: "Avenir Next";
+    font-size: 18px;
+}
+
 /* BOARD */
 
 main {
-    margin-top: 123px;
+    margin-top: 93px;
 }
 
 h1 {
@@ -65,5 +79,15 @@ main #board button {
     font-size: 40px;
     font-family: "Avenir Next";
     margin: 11px 13px;
-    
+}
+
+:focus {outline:none;}
+
+/* PLAYER */
+
+#player {
+    width: 1200px;
+    height: 600px;
+    background-color: aqua;
+    margin: 0 auto;
 }

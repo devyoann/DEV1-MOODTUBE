@@ -1,12 +1,4 @@
 
-button {
-	color: black;
-	opacity: 0.5;
-	text-decoration: none;
-	text-align: center;
-	border: none;
-	padding: 17px 6px;
- 
 /* MAIN */
 
 body{
@@ -34,7 +26,7 @@ main {
     margin-top: 123px;
 }
 
-main h1 {
+h1 {
     font-family: "Avenir Next";
     font-weight: 900;
     text-transform: uppercase;
@@ -44,11 +36,34 @@ main h1 {
     margin-left: 115px;
 }
 
-main #filet {
-    width: 250px;
-    height: 10px;
+
+#filet {
+    width: 80%;
+    height: 4px;
     border-radius: 5px;
     background-color: black;
     opacity: 0.5;
     margin-left: 115px;
+}
+
+main #board {
+    margin: 38px auto 0px auto;
+    width: 1250px;
+    text-align: center;
+}
+
+main #board button {
+	background-color: black;
+    opacity: 0.5;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	padding: 15px 8px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Avenir Next";
+    margin: 11px 13px;
+    
 }

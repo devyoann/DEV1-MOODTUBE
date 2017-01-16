@@ -43,7 +43,7 @@ $(document).ready(function() {
     
                 $('button').click(function() {
                     var _val = $('#search').val();
-                    alert(_val);
+                     
                 });
             },
             error: function(err) {
@@ -64,5 +64,15 @@ $(document).ready(function() {
     }
     
     setInterval(dateTime, 1000);
+   
+    
+    
+    $('.glitter').click(function() {
+        $('main').hide();
+        $('#player').show();
+        
+});
     
 });
+
+

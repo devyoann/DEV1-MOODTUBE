@@ -1,0 +1,93 @@
+
+/* MAIN */
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("asset/font/Avenir-Next.ttc");
+}
+
+body{
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+header svg{
+    width: 300px;
+    margin-top: 30px
+}
+
+header {
+    margin: 0px 40px;
+}
+
+#clock {
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+#time, #date {
+    display: inline-block;
+    font-family: "Avenir Next";
+    font-size: 18px;
+}
+
+/* BOARD */
+
+main {
+    margin-top: 93px;
+}
+
+h1 {
+    font-family: "Avenir Next";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 55px;
+    color: black;
+    opacity: 0.5;
+    margin-left: 115px;
+}
+
+
+#filet {
+    width: 80%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0.5;
+    margin-left: 115px;
+}
+
+main #board {
+    margin: 38px auto 0px auto;
+    width: 1250px;
+    text-align: center;
+}
+
+main #board button {
+	background-color: black;
+    opacity: 0.5;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	padding: 15px 8px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Avenir Next";
+    margin: 11px 13px;
+}
+
+:focus {outline:none;}
+
+/* PLAYER */
+
+#player {
+    width: 1200px;
+    height: 600px;
+    background-color: aqua;
+    margin: 0 auto;
+}

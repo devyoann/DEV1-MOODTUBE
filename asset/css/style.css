@@ -12,9 +12,20 @@ body{
     overflow: hidden;
 }
 
-header svg{
-    width: 300px;
-    margin-top: 30px
+a{
+    font-size: 52px;
+    font-family: "Avenir Next";
+    text-transform: uppercase;
+    color: black;
+    margin-top: 30px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a span {
+    opacity: 0.5;
 }
 
 header {
@@ -39,8 +50,7 @@ header {
 main {
     margin-top: 93px;
 }
-
-main h1 {
+h2 {
     font-family: "Avenir Next";
     font-weight: 900;
     text-transform: uppercase;
@@ -89,8 +99,12 @@ main #board button {
 /* PLAYER */
 
 #player {
-    width: 1200px;
-    height: 600px;
+    
     background-color: aqua;
-    margin: 0 auto;
+    margin: 120px auto 0 auto;
+}
+
+
+section#glitter {
+    background-color: aqua;
 }

@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('.glitter').click(function() {
         $('main').hide();
-        $('#player').show();
+        $('#glitter').show();
+        $('body').css('backgroundColor', 'aqua');
     });
     
     $('.button').hover(

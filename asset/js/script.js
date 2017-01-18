@@ -10,7 +10,7 @@ $(document).ready(function() {
                 $(this).text()
             );
         }, function() {
-            $('#vbutton').text('');
+            $('#vbutton').empty();
         }
     );
 });

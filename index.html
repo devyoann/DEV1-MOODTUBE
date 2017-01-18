@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>MoodTube</title>
+    
+    <!-- link css -->
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
     
+    <!-- connect api google -->
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="http://apis.google.com/js/client.js"></script>
-    
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
+
+    <!-- require ressource js -->
     <script src="asset/js/moment.min.js"></script>
     <script src="asset/js/jquery.min.js"></script>
+    
+    <!-- script js -->
+    <script src="asset/js/connect.api.js"></script>
+    <script src="asset/js/document.js"></script>
     <script src="asset/js/script.js"></script>
-    
-
-    
 </head>
 <body>
+
 <header>
         <a href="index.html">mood<span>tube</span></a>
         
-
-
         <div id="clock">
             <div id="time"></div>
             <div id="date"></div>
         </div>
-    
-  </header>
+    </header>
   
     <main>
           <h2>I FEEL :</h2>
@@ -63,24 +67,24 @@
               <button class="2000s">2000's</button>
           
           </div>
+        
     </main>
-
-            
-  
     <section id="glitter" style="display:none;">
+    <div id="name">
 
-            <div id="name">
-            </div>
+        </div>
 
-            <div id="player_audiobar">
-            </div>
+        <div id="player_audiobar">
 
-            <div id="back">
-            </div>
+        </div>
 
-            <div id="giphy">
-            </div>
+        <div id="back">
 
+        </div>
+
+        <div id="giphy">
+
+        </div>
     </section>
 </body>
 </html>

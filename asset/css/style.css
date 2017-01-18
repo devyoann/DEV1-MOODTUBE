@@ -50,7 +50,6 @@ header {
 main {
     margin-top: 93px;
 }
-
 h2 {
     font-family: "Avenir Next";
     font-weight: 900;
@@ -61,8 +60,11 @@ h2 {
     margin-left: 115px;
 }
 
+main #vbutton {
+    display: inline;
+}
 
-#filet {
+main #filet {
     width: 80%;
     height: 4px;
     border-radius: 5px;

@@ -7,9 +7,9 @@
 ### Demo
 
 ### Progress
-- HTML : 5%
-- CSS :  1%
-- Javascript : 34%
+- HTML : 56%
+- CSS :  43%
+- Javascript : 42%
 
 ### Functionality
 

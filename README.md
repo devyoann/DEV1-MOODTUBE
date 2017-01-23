@@ -13,7 +13,8 @@ In this group project, we have to put differents API together. We choose [Spotif
 
 ### Installation
 
-First, download the zip repository by [clicking here][2] or clone it with your terminal by copy/past this: `git clone https://github.com/ohyoyo/DEV1-MOODTUBE`
+First, download the zip repository by [clicking here][2] or clone it with your terminal by copy/past this: 
+-`git clone https://github.com/ohyoyo/DEV1-MOODTUBE`
 
 Then open `index.html` in Safari by preference. It might have some bugs with other browser.
 
@@ -33,13 +34,17 @@ ___
 ### Contact
 
 [dm.yoann@gmail.com](mailto:dm.yoann@gmail.com)
+
 [https://github.com/ohyoyo](https://github.com/ohyoyo)
 
-[dm.yoann@gmail.com](mailto:thibault.germain7@gmail.com)
-[https://github.com/ohyoyo](https://github.com/Thibgr)
+[thibault.germain7@gmail.com](mailto:thibault.germain7@gmail.com)
 
-[dm.yoann@gmail.com](mailto:vignolle.matthieu@gmail.com)
-[https://github.com/ohyoyo](https://github.com/Mayeunaise)
+[https://github.com/Thibgr](https://github.com/Thibgr)
+
+[vignolle.matthieu@gmail.com](mailto:vignolle.matthieu@gmail.com)
+
+[https://github.com/Mayeunaise](https://github.com/Mayeunaise)
+
 ---
 
 © Yoann Di Maria , Webstart - Paris

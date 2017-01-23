@@ -43,6 +43,7 @@ header #clock #time,
               #date {
     display: inline-block;
     font-family: "Avenir Next";
+                  
     font-size: 18px;
 }
 
@@ -110,17 +111,12 @@ main #board button:focus {
 
 /* PLAYER */
 
-#back {
+#return {
     background-image: url(../img/back.svg);
     background-repeat: no-repeat;
     width: 30px;
     height: 65px;
     margin-left: 40px;
-}
-
-section#glitter {
-    background-color: #ffbce4;
-    margin: 120px auto 0 auto;
 }
 
 #name {
@@ -136,4 +132,156 @@ section#glitter {
     font-family: "Avenir Next";
     margin: 11px 13px;
     display: inline-block;
+}
+
+/* SECTIONS */
+
+section#glitter {
+    background-color: deeppink;
+    margin: 120px auto 0 auto;
+}
+
+section#sad {
+    background-color: #232323;
+    margin: 120px auto 0 auto;
+}
+
+section#happy {
+    background-color: #fffc7d;
+    margin: 120px auto 0 auto;
+}
+
+section#dancing {
+    background: linear-gradient(228deg, #dd2c2c, #f3c124, #4fdf0d, #27cdce, #2b27ce, #f912c8);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: backDancing 8s ease infinite;
+    -moz-animation: backDancing 8s ease infinite;
+    -o-animation: backDancing 8s ease infinite;
+    animation: backDancing 8s ease infinite;
+
+    margin: 120px auto 0 auto;
+}
+
+    @-webkit-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @-moz-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @-o-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @keyframes backDancing { 
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+
+section#chilling {
+    background-color: #87cbf4;
+    margin: 120px auto 0 auto;
+}
+
+section#working {
+    background-color: #ff9d9d;
+    margin: 120px auto 0 auto;
+}
+
+section#sporty {
+    background-color: #8cc63f;
+    margin: 120px auto 0 auto;
+}
+
+section#sexual {
+    background-color: #ca001b;
+    margin: 120px auto 0 auto;
+}
+
+section#travelling {
+    background-color: #00edb9;
+    margin: 120px auto 0 auto;
+}
+
+section#gangsta {
+    background: rgb(51,51,51);
+    background: -moz-linear-gradient(top, rgba(51,51,51,1) 52%, rgba(57,0,14,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
+    background: linear-gradient(to bottom, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#39000e',GradientType=0 );
+    margin: 120px auto 0 auto;
+}
+
+section#trendy {
+    background-color: #ed1e79;
+    margin: 120px auto 0 auto;
+}
+
+section#tgif {
+    background-color: #00ffff;
+    margin: 120px auto 0 auto;
+}
+
+section#frenchy {
+    background: rgb(0,91,151);
+    background: -moz-linear-gradient(45deg, rgba(0,91,151,1) 0%, rgba(255,255,255,1) 43%, rgba(255,255,255,1) 58%, rgba(234,17,23,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
+    background: linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005b97', endColorstr='#ea1117',GradientType=1 );
+    margin: 120px auto 0 auto;
+}
+
+section#moodbooster {
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%, rgba(255,147,30,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff931e',GradientType=1 );
+    margin: 120px auto 0 auto;
+}
+
+section#kawai {
+    background-color: #1b1464;
+    margin: 120px auto 0 auto;
+}
+
+section#rockstar {
+    background-color: #000;
+    margin: 120px auto 0 auto;
+}
+
+section#jazzy {
+    background-color: #736357;
+    margin: 120px auto 0 auto;
+}
+
+section#country {
+    background-color: #8c6239;
+    margin: 120px auto 0 auto;
+}
+
+section#blessed {
+    background-color: #fff;
+    margin: 120px auto 0 auto;
+}
+
+section#80 {
+    background-color: #ff00ff;
+    margin: 120px auto 0 auto;
+}
+
+section#90 {
+    background-color: #ef6f35;
+    margin: 120px auto 0 auto;
+}
+
+section#2000 {
+    background-color: #fcee21;
+    margin: 120px auto 0 auto;
 }

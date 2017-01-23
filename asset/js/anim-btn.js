@@ -1,6 +1,8 @@
 $(document).ready(function() {
     
     $(function() {
+        
+        //GLITTER
   
   // default is varying levels of transparent white sparkles
   $(".sparkley:first").sparkleh();
@@ -20,8 +22,7 @@ $(document).ready(function() {
     color: ["#ff0080","#ff0080","#0000FF"]
   });
   
-  
-  
+        
   $("p").sparkleh({
     count: 20,
     color: "#00ff00",
@@ -296,6 +297,10 @@ $.fn.imagesLoaded = function(callback){
  
   return this;
 };
+    
+    
+    // SEXUAL
+    
 var love = setInterval(function() {
     var r_num = Math.floor(Math.random() * 40) + 1;
     var r_size = Math.floor(Math.random() * 10) + 15;

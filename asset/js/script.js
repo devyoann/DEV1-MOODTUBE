@@ -2,7 +2,13 @@ $(document).ready(function() {
     $('.glitter').click(function() {
         $('main').hide();
         $('#glitter').show();
-        $('body').css('backgroundColor', 'aqua');
+        $('body').css('backgroundColor', '#ffbce4');
+    });
+    
+    $('#back').click(function(){
+        $('#glitter').hide();
+        $('main').show();
+        $('body').css('backgroundColor', 'whitesmoke');
     });
     
     $('.button').hover(

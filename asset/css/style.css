@@ -1,24 +1,28 @@
 
 /* MAIN */
 
+@import url(../font/Avenir-Next.ttc);
+@import url(../font/Avenir-Next.ttf);
+
 @font-face {
-    font-family: "Avenir Next";
-    src: url("../font/Avenir-Next.ttc");
+    font-family: 'Avenir Next';
+    src: url(../font/Avenir-Next.ttc) format('OpenType')
+         url(../font/AvenirNext-Bold.ttf) format('TrueType');
 }
 
-body{
+body {
     background-color: whitesmoke;
     text-transform: uppercase;
     overflow: hidden;
 }
 
-header a{
-    font-size: 52px;
+header a {
     font-family: "Avenir Next";
+    font-weight: 900;
+    font-size: 52px;
     text-transform: uppercase;
     color: black;
     margin-top: 30px;
-    font-weight: 900;
     letter-spacing: -0.02em;
     text-decoration: none;
     display: inline-block;

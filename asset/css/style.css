@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Avenir Next";
-    src: url("asset/font/Avenir-Next.ttc");
+    src: url("../font/Avenir-Next.ttc");
 }
 
 body{
@@ -12,7 +12,7 @@ body{
     overflow: hidden;
 }
 
-a{
+header a{
     font-size: 52px;
     font-family: "Avenir Next";
     text-transform: uppercase;
@@ -24,7 +24,7 @@ a{
     display: inline-block;
 }
 
-a span {
+header a span {
     opacity: 0.5;
 }
 
@@ -32,14 +32,15 @@ header {
     margin: 0px 40px;
 }
 
-#clock {
+header #clock {
     text-align: right;
     position: absolute;
     right: 40px;
     top: 30px;
 }
 
-#time, #date {
+header #clock #time,
+              #date {
     display: inline-block;
     font-family: "Avenir Next";
     font-size: 18px;
@@ -50,7 +51,7 @@ header {
 main {
     margin-top: 93px;
 }
-h2 {
+main h2 {
     font-family: "Avenir Next";
     font-weight: 900;
     text-transform: uppercase;
@@ -94,17 +95,11 @@ main #board button {
     margin: 11px 13px;
 }
 
-:focus {outline:none;}
-
-/* PLAYER */
-
-#player {
-    
-    background-color: aqua;
-    margin: 120px auto 0 auto;
+:focus {
+    outline:none;
 }
-
 
 section#glitter {
-    background-color: aqua;
+    background-color: red;
 }
+

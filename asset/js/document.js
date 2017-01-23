@@ -1,13 +1,15 @@
 /* date - momentjs */
-var dateTime = function() {
+function dateTime() {
     var date = new Date();
-        _getTime = moment().format('HH:mm:ss'),
+    var _getTime = moment().format('HH:mm:ss'),
         _getDate = moment().format('DD.MM.YYYY');
         
     $('#time').text(_getTime);
     $('#date').text(_getDate);
 }
 
-dateTime();
+$(function() {
+    dateTime();
+});
 
-setInterval(dateTime, 100);
+setInterval(dateTime, 1000);

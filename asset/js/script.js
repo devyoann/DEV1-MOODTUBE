@@ -23,10 +23,8 @@ $(document).ready(function() {
         $('body').addClass('section ' + _val);
         $('section').attr('id', _val);
         $(sectionId).show();
-        $('#sec-Name').text(_val);
-
+        $('#sec-Name').text($(this).text());
         $(sectionClass).show();
-        $('#return').text(_val);
         
         getGiphy(_val, function(data){
             console.log(data);

@@ -114,9 +114,14 @@ main #board button:focus {
 #return {
     background-image: url(../img/back.svg);
     background-repeat: no-repeat;
+    cursor: pointer;
     width: 30px;
     height: 65px;
     margin-left: 40px;
+}
+
+#sec-name {
+    
 }
 
 #name {

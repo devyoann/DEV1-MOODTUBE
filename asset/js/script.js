@@ -16,7 +16,7 @@ $(document).ready(function() {
         $('section').addClass(_val);
         $('section').attr('id', _val);
         $(sectionId).show();
-        $('#return').text(_val);
+        $('#sec-Name').text(_val);
 
         getGiphy(_val, function(data){
             console.log(data);

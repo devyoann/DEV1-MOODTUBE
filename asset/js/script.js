@@ -351,5 +351,20 @@ var love = setInterval(function() {
     });
 }, 900);
 
+$("#board button")
+  .each(function(i) {
+    if (i != 0) {
+      $("#sound")
+        .clone()
+        .attr("id", "sound" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beep", i);
+  })
+  .mouseenter(function() {
+    console.log($(this).data('beep'))
+    $("#sound" + $(this).data("beep"))[0].play();
+  });
+$("#sound").attr("id", "sound0");
 
 });

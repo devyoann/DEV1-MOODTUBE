@@ -16,7 +16,9 @@ $(document).ready(function() {
             _val = $(this).val(),
             sectionClass = 'section.' + _val,
             sectionId = 'section#' + _val,
-            backgroundId;
+            backgroundId,
+            i,
+            IntervalGifAnim;
 
         $('main').hide();
         $('section').addClass(_val);
@@ -25,6 +27,9 @@ $(document).ready(function() {
         $(sectionClass).show();
         $('#return').text(_val);
         
+        $(sectionId).show();
+        $('#sec-Name').text(_val);
+
         getGiphy(_val, function(data){
             console.log(data);
             var gifAnim = function() {
@@ -34,10 +39,11 @@ $(document).ready(function() {
             }
             
             gifAnim();
-            setInterval(gifAnim, 5000);
+            
+            IntervalGifAnim = setInterval(gifAnim, 5000);
         });
         
-        for(var i=0; i < pageBlack.length; i++) {
+        for(i = 0; i < pageBlack.length; i++) {
             if(pageBlack[i] == _val) {
                 $('header a').css('color', colorWhite);
                 $('#time').css('color', colorWhite);
@@ -55,5 +61,6 @@ $(document).ready(function() {
         $('header a').css('color', colorBlack);
         $('#time').css('color', colorBlack);
         $('#date').css('color', colorBlack);
+        clearInterval(IntervalGifAnim);
     });
 });

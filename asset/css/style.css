@@ -65,5 +65,305 @@ main #board button {
     font-size: 40px;
     font-family: "Avenir Next";
     margin: 11px 13px;
+    position: relative;
     
 }
+
+/* ANIMATION */
+
+
+
+main #board button.glitter:hover {
+    background-color: deeppink;
+    opacity: 1
+}
+main #board button.sad:hover {
+    background-color: #232323;
+    opacity: 1
+}
+main #board button.happy:hover {
+    background-color: #fffc7d;
+    color: orange;
+    opacity: 1;
+}
+main #board button.rainbow:hover {
+    webkit-animation:rainbow 1s infinite;
+    -ms-animation:rainbow 1s infinite;
+    -o-animation:rainbow 1s infinite;
+    animation:rainbow 1s infinite;
+    color: white;
+}
+@-webkit-keyframes rainbow {
+0% {background-color: #ff0000;opacity: 1}
+10% {background-color: #ff8000;opacity: 1}
+20% {background-color: #ffff00;opacity: 1}
+30% {background-color: #80ff00;opacity: 1}
+40% {background-color: #00ff00;opacity: 1}
+50% {background-color: #00ff80;opacity: 1}
+60% {background-color: #00ffff;opacity: 1}
+70% {background-color: #0080ff;opacity: 1}
+80% {background-color: #0000ff;opacity: 1}
+90% {background-color: #8000ff;opacity: 1}
+100% {background-color: #ff0080;opacity: 1}
+}
+@-ms-keyframes rainbow {
+0% {background-color: #ff0000;opacity: 1}
+10% {background-color: #ff8000;opacity: 1}
+20% {background-color: #ffff00;opacity: 1}
+30% {background-color: #80ff00;opacity: 1}
+40% {background-color: #00ff00;opacity: 1}
+50% {background-color: #00ff80;opacity: 1}
+60% {background-color: #00ffff;opacity: 1}
+70% {background-color: #0080ff;opacity: 1}
+80% {background-color: #0000ff;opacity: 1}
+90% {background-color: #8000ff;opacity: 1}
+100% {background-color: #ff0080;opacity: 1}
+}
+@-o-keyframes rainbow {
+0% {background-color: #ff0000;opacity: 1}
+10% {background-color: #ff8000;opacity: 1}
+20% {background-color: #ffff00;opacity: 1}
+30% {background-color: #80ff00;opacity: 1}
+40% {background-color: #00ff00;opacity: 1}
+50% {background-color: #00ff80;opacity: 1}
+60% {background-color: #00ffff;opacity: 1}
+70% {background-color: #0080ff;opacity: 1}
+80% {background-color: #0000ff;opacity: 1}
+90% {background-color: #8000ff;opacity: 1}
+100% {background-color: #ff0080;opacity: 1}
+}
+@keyframes rainbow {
+0% {background-color: #ff0000;opacity: 1}
+10% {background-color: #ff8000;opacity: 1}
+20% {background-color: #ffff00;opacity: 1}
+30% {background-color: #80ff00;opacity: 1}
+40% {background-color: #00ff00;opacity: 1}
+50% {background-color: #00ff80;opacity: 1}
+60% {background-color: #00ffff;opacity: 1}
+70% {background-color: #0080ff;opacity: 1}
+80% {background-color: #0000ff;opacity: 1}
+90% {background-color: #8000ff;opacity: 1}
+100% {background-color: #ff0080;opacity: 1}
+}
+
+main #board button.chilling:hover {
+    background-color: #87cbf4;
+}
+
+main #board button.working:hover {
+    background-color: #ff9d9d;
+    opacity: 1;
+}
+main #board button.sporty:hover {
+    background-color: #8cc63f;
+    opacity: 1;
+}
+main #board button.sexual:hover {
+    background-color: #ca001b;
+    opacity: 1;
+}
+main #board button.travelling:hover {
+    background-color: #00edb9;
+    opacity: 1;
+}
+main #board button.gangsta:hover {
+    opacity: 1;
+    background: rgb(51,51,51);
+    background: -moz-linear-gradient(top, rgba(51,51,51,1) 52%, rgba(57,0,14,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
+    background: linear-gradient(to bottom, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#39000e',GradientType=0 );
+}
+main #board button.trendy:hover {
+    background-color: #ed1e79;
+    opacity: 1;
+}
+main #board button.tgif:hover {
+    background-color: #00ffff;
+    opacity: 1;
+}
+main #board button.frenchy:hover {
+    opacity: 1;
+    color: #444444;
+    background: rgb(0,91,151);
+    background: -moz-linear-gradient(45deg, rgba(0,91,151,1) 0%, rgba(255,255,255,1) 43%, rgba(255,255,255,1) 58%, rgba(234,17,23,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
+    background: linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005b97', endColorstr='#ea1117',GradientType=1 );
+}
+main #board button.mood-booster:hover {
+    opacity: 1;
+    color: #444444;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%, rgba(255,147,30,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff931e',GradientType=1 );
+}
+main #board button.kawai:hover {
+    background-color: #1b1464;
+    opacity: 1;
+}
+main #board button.rockstar:hover {
+    background-color: #000000;
+    opacity: 1;
+}
+
+/* FIRE */
+
+.fire:hover {
+}
+.fire:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Blazing:hover {
+    display: inline-block;
+    margin: 0;
+
+    color: rgb(255, 115, 0);
+
+   
+    
+    text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -10px 30px yellow;
+    animation: 2s Blazing infinite alternate linear;
+}
+
+@keyframes Blazing {
+    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 0 10px orange,
+        0 0 0 yellow,
+        0 0 5px yellow,
+        -2px -5px 5px yellow,
+        4px -10px 10px yellow; }
+    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+        0 0 20px orange,
+        0 0 5px yellow,
+        -2px -5px 5px yellow,
+        3px -10px 10px yellow,
+        -4px -15px 20px yellow; }
+    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 -5px 10px orange,
+        -2px -5px 5px yellow,
+        3px -10px 10px yellow,
+        -4px -15px 20px yellow,
+        2px -20px 30px rgba(255,255,0,0.5); }
+    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 -5px 10px orange,
+        3px -5px 5px yellow,
+        -4px -10px 10px yellow,
+        2px -20px 30px rgba(255,255,0,0.5),
+        0px -25px 40px rgba(255,255,0,0)}
+    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+        0 0 10px orange,
+        0 0 0 yellow,
+        0 0 5px yellow,
+        -2px -5px 5px yellow,
+        4px -10px 10px yellow; }
+}
+
+
+
+
+main #board button.jazzy:hover {
+    background-color: #736357;
+    opacity: 1;
+}
+main #board button.country:hover {
+    background-color: #8c6239;
+    opacity: 1;
+}
+main #board button.blessed:hover {
+    background-color: #ffffff;
+    opacity: 1;
+    color: #444444;
+}
+main #board button.s80:hover {
+    background-color: #ff00ff;
+    opacity: 1;
+}
+main #board button.s90:hover {
+    background-color: #ef6f35;
+    opacity: 1;
+}
+main #board button.s2000:hover {
+    background-color: #fcee21;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* HEART */
+
+.bg_heart{
+    overflow: hidden;
+}
+.bg_heart:hover .heart {
+    display:block;
+    opacity: 1;
+}
+
+.heart {
+    position: absolute;
+    opacity: 0;
+    top: -150%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+ }
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+@keyframes love {
+  0%{top:110%}
+}
+
+
+

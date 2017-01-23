@@ -27,11 +27,4 @@ $(document).ready(function() {
             $('#rs').append($('img#rdm').attr('src'));
         });
     });
-
-    $('#return').click(function() {
-        $('main').show();
-        $('section').hide();
-        $('img#rdm').attr('src', '');
-        $('#rs').empty();
-    });
 });

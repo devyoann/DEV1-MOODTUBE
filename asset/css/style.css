@@ -93,9 +93,10 @@ main #board button {
     font-size: 40px;
     font-family: "Avenir Next";
     margin: 11px 13px;
+    position: relative;
 }
 
-:focus {
+main #board button :focus {
     outline:none;
 }
 
@@ -103,3 +104,36 @@ section#glitter {
     background-color: red;
 }
 
+main #board button:focus {
+    outline:none;
+}
+
+/* PLAYER */
+
+#back {
+    background-image: url(../img/back.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 65px;
+    margin-left: 40px;
+}
+
+section#glitter {
+    background-color: #ffbce4;
+    margin: 120px auto 0 auto;
+}
+
+#name {
+    background-color: black;
+    opacity: 0.5;
+	text-decoration: none;
+	text-align: center;
+	padding: 15px 8px;
+    color: #ffbce4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Avenir Next";
+    margin: 11px 13px;
+    display: inline-block;
+}

@@ -92,9 +92,12 @@ main #board button {
     font-size: 40px;
     font-family: "Avenir Next";
     margin: 11px 13px;
+    position: relative;
 }
 
-:focus {outline:none;}
+main #board button:focus {
+    outline:none;
+}
 
 /* PLAYER */
 

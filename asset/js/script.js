@@ -6,8 +6,6 @@ $(document).ready(function() {
         playerAudio = $('audio')[0],
         clickPlay = 1,
         IntervalGifAnim;
-    
-    playerAudio.pause();
 
     // hover (i feel) button
     $('.button').hover(function() {
@@ -17,6 +15,27 @@ $(document).ready(function() {
     }, function() {
         $('#vbutton').empty();
     });
+    
+    var queues = function() {
+        
+    },
+        playerPlay = function(a, i) {
+            if(i == 'play')
+                a.play();
+            else if(i == 'pause')
+                a.pause();
+    },
+        playerPrevious = function(a, i) {
+            
+    },
+        playerNext = function() {
+            
+    },
+        randomInt = function(int) {
+            return Math.floor(Math.random() * int) + 1;
+    };
+    
+    playerPlay(playerAudio, 'pause');
 
     $('.button').click(function() {
         var _val = $(this).val(),
@@ -30,17 +49,12 @@ $(document).ready(function() {
         $('section').removeClass('none').addClass(_val).attr('id', _val);
         $('body').addClass('section ' + _val);
         $(sectionId).show();
-        $('#sec-Name').text($(this).text());
+        $('#sec-name').text($(this).text());
         $('.fb-share-button').attr('data-href', shareUrl);
         $('.twitter-share-button').attr('href', shareUrl);
-
-        var randomInt = function(int) {
-            return Math.floor(Math.random() * int) + 1;
-        }
         
         getSPotify(_val, function(data) {
-            console.log(data);
-            
+            //console.log(data);
             
             var _tpl = [
                 'description : ' + data.description,
@@ -52,20 +66,24 @@ $(document).ready(function() {
             ].join('<br/>');
             $('test').html(_tpl);
             
-            
             var son = data.tracks.items[randomInt(data.tracks.items.length)].track.preview_url,
                 ms = data.tracks.items[randomInt(data.tracks.items.length)].track.duration_ms,
                 moms = parseInt(moment().format('ms'));
     
-        
             $('audio').attr('src', son);
             $('source').attr('src', son);
-            playerAudio.play();
+            playerPlay(playerAudio, 'play');
         });
-        
+        var dataR;
         getGiphy(_val, function(data){
+            console.log(data);
             var gifAnim = function() {
-                $('img#rdm').attr('src', data.data[randomInt(data.data.length)].images.downsized.url).attr('alt', _val);
+                dataR = data.data[randomInt(data.data.length)];
+                $('img#rdm').
+                    attr('src', dataR.images.original.url).
+                    attr('alt', _val).
+                    css('width', dataR.images.original.width).
+                    css('height', dataR.images.original.height);
             }
             
             gifAnim();
@@ -91,7 +109,7 @@ $(document).ready(function() {
         $('header a').css('color', colorBlack);
         $('#time').css('color', colorBlack);
         $('#date').css('color', colorBlack);
-        playerAudio.pause();
+        playerPlay(playerAudio, 'pause');
         $('audio').attr('src', '');
         $('source').attr('src', '');
         clearInterval(IntervalGifAnim);
@@ -99,12 +117,12 @@ $(document).ready(function() {
     
     $('#playPause').click(function() {
         if(clickPlay == 1) {
-            playerAudio.pause();
+            playerPlay(playerAudio, 'pause');
             clickPlay = 0;
             $(this).css('background-image', 'url(asset/img/play.svg)');
         }
         else if(clickPlay == 0) {
-            playerAudio.play();
+            playerPlay(playerAudio, 'play');
             clickPlay = 1;
             $(this).css('background-image', 'url(asset/img/pause.svg)');
         }

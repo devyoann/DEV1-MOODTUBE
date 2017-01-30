@@ -8,8 +8,8 @@ function dateTime() {
     $('#date').text(_getDate);
 }
 
-$(function() {
-    dateTime();
-});
-
 setInterval(dateTime, 1000);
+
+var url = window.location.protocol + "//" + (window.location.host + "/" + window.location.pathname).replace('//', '/'),
+    getUrl = document.URL.split('#')[1],
+    sectionGet = ['glitter', 'sad', 'happy', 'dancing', 'chilling', 'working', 'sporty', 'sexuel', 'travelling', 'gangsta', 'trendy', 'tgif', 'frenchy', 'moodbooster', 'kawai', 'rockstar', 'jazzy', 'country', 'blessed', '80', '90', '2000'];

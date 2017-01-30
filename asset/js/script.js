@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // variable public
-    var pagesBlack = ['sad', 'gangsta', 'kaway', 'rockstar'],
+    var pagesBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
         colorWhite = 'rgb(255, 255, 255)',
         colorBlack = 'rgb(0, 0, 0)',
         playerAudio = $('audio')[0],
@@ -82,6 +82,9 @@ $(document).ready(function() {
                 $('header a').css('color', colorWhite);
                 $('#time').css('color', colorWhite);
                 $('#date').css('color', colorWhite);
+                $('#sec-name').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('#player').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('.cls-2').css('fill', '#FFF');
             }
         }
     });
@@ -95,6 +98,9 @@ $(document).ready(function() {
         $('header a').css('color', colorBlack);
         $('#time').css('color', colorBlack);
         $('#date').css('color', colorBlack);
+        $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
+        $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
+        $('.cls-2').css('fill', '#000');
         playerAudio.pause();
         $('audio').attr('src', '');
         $('source').attr('src', '');

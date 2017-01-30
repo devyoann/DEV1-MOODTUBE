@@ -1,47 +1,80 @@
 
 /* MAIN */
 
-body{
-    background-color: whitesmoke;
-    text-transform: uppercase;
+@import url(../font/Avenir-Next.ttc);
+@import url(../font/Avenir-Next.ttf);
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url(../font/Avenir-Next.ttc) format('OpenType')
+         url(../font/AvenirNext-Bold.ttf) format('TrueType');
 }
 
-header svg{
-    width: 300px;
+body {
+    background-color: rgb(245, 245, 245);
+    text-transform: uppercase;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+header a {
+    font-family: "Avenir Next";
+    font-weight: 900;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a span {
+    opacity: 0.5;
 }
 
 header {
-    margin-top: 30px;
-    margin-left: 40px;
+    margin: 0px 40px;
 }
 
-@font-face {
-    font-family: "Avenir Next";
-    src: url("asset/font/Avenir-Next.ttc");
+header #clock {
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+header #clock #time,
+              #date {
+    display: inline-block;
+    font-family: "Avenir Next";   
+    font-size: 18px;
 }
 
 /* BOARD */
 
 main {
-    margin-top: 123px;
+    margin-top: 93px;
 }
-
-h1 {
+main h2 {
     font-family: "Avenir Next";
     font-weight: 900;
     text-transform: uppercase;
     font-size: 55px;
-    color: black;
+    color: rgb(0, 0, 0);
     opacity: 0.5;
     margin-left: 115px;
 }
 
+main #vbutton {
+    display: inline;
+}
 
-#filet {
+main #filet {
     width: 80%;
     height: 4px;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     opacity: 0.5;
     margin-left: 115px;
 }
@@ -53,317 +86,322 @@ main #board {
 }
 
 main #board button {
-	background-color: black;
+	background-color: rgb(0, 0, 0);
     opacity: 0.5;
 	text-decoration: none;
 	text-align: center;
 	border: none;
 	padding: 15px 8px;
-    color: whitesmoke;
+    color: rgb(245, 245, 245);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
     font-family: "Avenir Next";
     margin: 11px 13px;
     position: relative;
-    
 }
 
-/* ANIMATION */
-
-
-
-main #board button.glitter:hover {
-    background-color: deeppink;
-    opacity: 1
-}
-main #board button.sad:hover {
-    background-color: #232323;
-    opacity: 1
-}
-main #board button.happy:hover {
-    background-color: #fffc7d;
-    color: orange;
-    opacity: 1;
-}
-main #board button.rainbow:hover {
-    webkit-animation:rainbow 1s infinite;
-    -ms-animation:rainbow 1s infinite;
-    -o-animation:rainbow 1s infinite;
-    animation:rainbow 1s infinite;
-    color: white;
-}
-@-webkit-keyframes rainbow {
-0% {background-color: #ff0000;opacity: 1}
-10% {background-color: #ff8000;opacity: 1}
-20% {background-color: #ffff00;opacity: 1}
-30% {background-color: #80ff00;opacity: 1}
-40% {background-color: #00ff00;opacity: 1}
-50% {background-color: #00ff80;opacity: 1}
-60% {background-color: #00ffff;opacity: 1}
-70% {background-color: #0080ff;opacity: 1}
-80% {background-color: #0000ff;opacity: 1}
-90% {background-color: #8000ff;opacity: 1}
-100% {background-color: #ff0080;opacity: 1}
-}
-@-ms-keyframes rainbow {
-0% {background-color: #ff0000;opacity: 1}
-10% {background-color: #ff8000;opacity: 1}
-20% {background-color: #ffff00;opacity: 1}
-30% {background-color: #80ff00;opacity: 1}
-40% {background-color: #00ff00;opacity: 1}
-50% {background-color: #00ff80;opacity: 1}
-60% {background-color: #00ffff;opacity: 1}
-70% {background-color: #0080ff;opacity: 1}
-80% {background-color: #0000ff;opacity: 1}
-90% {background-color: #8000ff;opacity: 1}
-100% {background-color: #ff0080;opacity: 1}
-}
-@-o-keyframes rainbow {
-0% {background-color: #ff0000;opacity: 1}
-10% {background-color: #ff8000;opacity: 1}
-20% {background-color: #ffff00;opacity: 1}
-30% {background-color: #80ff00;opacity: 1}
-40% {background-color: #00ff00;opacity: 1}
-50% {background-color: #00ff80;opacity: 1}
-60% {background-color: #00ffff;opacity: 1}
-70% {background-color: #0080ff;opacity: 1}
-80% {background-color: #0000ff;opacity: 1}
-90% {background-color: #8000ff;opacity: 1}
-100% {background-color: #ff0080;opacity: 1}
-}
-@keyframes rainbow {
-0% {background-color: #ff0000;opacity: 1}
-10% {background-color: #ff8000;opacity: 1}
-20% {background-color: #ffff00;opacity: 1}
-30% {background-color: #80ff00;opacity: 1}
-40% {background-color: #00ff00;opacity: 1}
-50% {background-color: #00ff80;opacity: 1}
-60% {background-color: #00ffff;opacity: 1}
-70% {background-color: #0080ff;opacity: 1}
-80% {background-color: #0000ff;opacity: 1}
-90% {background-color: #8000ff;opacity: 1}
-100% {background-color: #ff0080;opacity: 1}
+main #board button :focus {
+    outline: none;
 }
 
-main #board button.chilling:hover {
-    background-color: #87cbf4;
+main #board button:focus {
+    outline: none;
 }
 
-main #board button.working:hover {
-    background-color: #ff9d9d;
-    opacity: 1;
-}
-main #board button.sporty:hover {
-    background-color: #8cc63f;
-    opacity: 1;
-}
-main #board button.sexual:hover {
-    background-color: #ca001b;
-    opacity: 1;
-}
-main #board button.travelling:hover {
-    background-color: #00edb9;
-    opacity: 1;
-}
-main #board button.gangsta:hover {
-    opacity: 1;
-    background: rgb(51,51,51);
-    background: -moz-linear-gradient(top, rgba(51,51,51,1) 52%, rgba(57,0,14,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
-    background: linear-gradient(to bottom, rgba(51,51,51,1) 52%,rgba(57,0,14,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#39000e',GradientType=0 );
-}
-main #board button.trendy:hover {
-    background-color: #ed1e79;
-    opacity: 1;
-}
-main #board button.tgif:hover {
-    background-color: #00ffff;
-    opacity: 1;
-}
-main #board button.frenchy:hover {
-    opacity: 1;
-    color: #444444;
-    background: rgb(0,91,151);
-    background: -moz-linear-gradient(45deg, rgba(0,91,151,1) 0%, rgba(255,255,255,1) 43%, rgba(255,255,255,1) 58%, rgba(234,17,23,1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
-    background: linear-gradient(45deg, rgba(0,91,151,1) 0%,rgba(255,255,255,1) 43%,rgba(255,255,255,1) 58%,rgba(234,17,23,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005b97', endColorstr='#ea1117',GradientType=1 );
-}
-main #board button.mood-booster:hover {
-    opacity: 1;
-    color: #444444;
-    background: rgb(255,255,255);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%, rgba(255,147,30,1) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 10%,rgba(255,147,30,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff931e',GradientType=1 );
-}
-main #board button.kawai:hover {
-    background-color: #1b1464;
-    opacity: 1;
-}
-main #board button.rockstar:hover {
-    background-color: #000000;
-    opacity: 1;
+/* SECTION */
+
+#return {
+    background-image: url(../img/back.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 65px;
+    margin-left: 40px;
 }
 
-/* FIRE */
-
-.fire:hover {
-}
-.fire:before {
-    content: '';
+#name {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+	text-decoration: none;
+	text-align: center;
+	padding: 15px 8px;
+    color: rgb(255, 188, 228);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Avenir Next";
+    margin: 11px 13px;
     display: inline-block;
-    height: 100%;
-    vertical-align: middle;
 }
 
-.Blazing:hover {
-    display: inline-block;
-    margin: 0;
+/* SECTIONS */
 
-    color: rgb(255, 115, 0);
-
-   
-    
-    text-shadow:
-        0 3px 20px red,
-        0 0 20px red,
-        0 0 10px orange,
-        4px -5px 6px yellow,
-        -4px -10px 10px yellow,
-        0 -10px 30px yellow;
-    animation: 2s Blazing infinite alternate linear;
+.section.glitter {
+    background-color: rgb(255, 20, 147);
 }
 
-@keyframes Blazing {
-    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 0 yellow,
-        0 0 5px yellow,
-        -2px -5px 5px yellow,
-        4px -10px 10px yellow; }
-    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
-        0 0 20px orange,
-        0 0 5px yellow,
-        -2px -5px 5px yellow,
-        3px -10px 10px yellow,
-        -4px -15px 20px yellow; }
-    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 -5px 10px orange,
-        -2px -5px 5px yellow,
-        3px -10px 10px yellow,
-        -4px -15px 20px yellow,
-        2px -20px 30px rgba(255,255,0,0.5); }
-    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 -5px 10px orange,
-        3px -5px 5px yellow,
-        -4px -10px 10px yellow,
-        2px -20px 30px rgba(255,255,0,0.5),
-        0px -25px 40px rgba(255,255,0,0)}
-    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-        0 0 10px orange,
-        0 0 0 yellow,
-        0 0 5px yellow,
-        -2px -5px 5px yellow,
-        4px -10px 10px yellow; }
+.section.sad {
+    background-color: rgb(35, 35, 35);
 }
 
+.section.happy {
+    background-color: rgb(255, 252, 125);
+}
 
+.section.dancing {
+    background: linear-gradient(228deg, rgb(221, 44, 44), rgb(243, 193, 36), rgb(79, 223, 13), rgb(39, 205, 206), rgb(43, 39, 206), rgb(249, 18, 200));
+    background-size: 1200% 1200%;
+    -webkit-animation: backDancing 8s ease infinite;
+    -moz-animation: backDancing 8s ease infinite;
+    -o-animation: backDancing 8s ease infinite;
+    animation: backDancing 8s ease infinite;
+}
 
+@-webkit-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @-moz-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @-o-keyframes backDancing {
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
+    @keyframes backDancing { 
+        0%{background-position:0% 97%}
+        50%{background-position:100% 4%}
+        100%{background-position:0% 97%}
+    }
 
-main #board button.jazzy:hover {
-    background-color: #736357;
-    opacity: 1;
+.section.chilling {
+    background-color: rgb(135, 203, 244);
 }
-main #board button.country:hover {
-    background-color: #8c6239;
-    opacity: 1;
+
+.section.working {
+    background-color: rgb(255, 157, 157);
 }
-main #board button.blessed:hover {
-    background-color: #ffffff;
-    opacity: 1;
-    color: #444444;
+
+.section.sporty {
+    background-color: rgb(140, 198, 63);
 }
-main #board button.s80:hover {
-    background-color: #ff00ff;
-    opacity: 1;
+
+.section.sexual {
+    background-color: rgb(202, 0, 27);
 }
-main #board button.s90:hover {
-    background-color: #ef6f35;
-    opacity: 1;
+
+.section.travelling {
+    background-color: rgb(0, 237, 185);
 }
-main #board button.s2000:hover {
+
+.section.gangsta {
+    background: rgb(51, 51, 51);
+    background: -moz-linear-gradient(top, rgba(51, 51, 51, 1) 52%, rgba(57, 0, 14, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(51, 51, 51)', endColorstr='rgb(57, 0, 14)', GradientType=0);
+}
+
+.section.trendy {
+    background-color: rgb(237, 30, 121);
+}
+
+.section.tgif {
+    background-color: rgb(0, 255, 255);
+}
+
+.section.frenchy {
+    background: rgb(0, 91, 151);
+    background: -moz-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 58%, rgba(234, 17, 23, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
+    background: linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(0, 91, 151)', endColorstr='rgb(234, 17, 23)', GradientType=1);
+}
+
+.section.moodbooster {
+    background: rgb(255, 255, 255);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%, rgba(255, 147, 30, 1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(255, 255, 255)', endColorstr='rgb(255, 147, 30)', GradientType=1);
+}
+
+.section.kawai {
+    background-color: rgb(27, 20, 100);
+}
+
+.section.rockstar {
+    background-color: rgb(0, 0, 0);
+}
+
+.section.jazzy {
+    background-color: rgb(115, 99, 87);
+}
+
+.section.country {
+    background-color: rgb(140, 98, 57);
+}
+
+.section.blessed {
+    background-color: rgb(255, 255, 255);
+}
+
+.section.s80 {
+    background-color: rgb(255, 0, 255);
+}
+
+.section.s90 {
+    background-color: rgb(239, 111, 53);
+}
+
+.section.s2000 {
+    background-color: rgb(252, 238, 33);
+}
+
+section#2000 {
     background-color: #fcee21;
+    margin: 120px auto 0 auto;
+}
+
+/* PLAYER */
+
+#player {
+    width: 790px;
+    background-color: white;
+    opacity: 0.5;
+    margin: 0 auto;
+    padding: 17px 25px;
+}
+
+#playPause {
+    background-image: url('../img/play.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 30px;
+    width: 20px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+#previous {
+    background-image: url('../img/previousSong.svg');
+    cursor: pointer;
+    height: 30px;
+    width: 25px;
+    margin-right: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+#progressBar {
+    height: 4px;
+    width: 376px;
+    border-radius: 2px;
+    background-color: black;
+    opacity: 0.5;
+    margin-right: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+#next {
+    background-image: url('../img/nextSong.svg');
+    cursor: pointer;
+    height: 30px;
+    width: 25px;
+    margin-right: 29px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+#soundIcon {
+    background-image: url('../img/sound.svg');
+    cursor: pointer;
+    height: 36px;
+    width: 30px;
+    margin-right: 12px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+#soundBar {
+    height: 4px;
+    width: 120px;
+    border-radius: 2px;
+    background-color: black;
+    opacity: 0.5;
+    margin-right: 27px;
+    display: inline-block;
+    position: relative;
+}
+
+#grabPB, #grabSB {
+    cursor: pointer;
+    height: 30px;
+    width: 6px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
     opacity: 1;
+    top: -27px;
 }
 
-
-
-
-
-
-
-
-
-/* HEART */
-
-.bg_heart{
-    overflow: hidden;
-}
-.bg_heart:hover .heart {
-    display:block;
-    opacity: 1;
+#playlist {
+    background-image: url('../img/list.svg');
+    cursor: pointer;
+    height: 35px;
+    width: 32px;
+    margin-right: 12px;
+    display: inline-block;
+    background-repeat: no-repeat;
 }
 
-.heart {
-    position: absolute;
-    opacity: 0;
-    top: -150%;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -m-transform: rotate(-45deg);
-    transform: rotate(-45deg);
- }
+/* IMG */
 
-.heart:before {
-    position: absolute;
-    top: -50%;
-    left: 0;
+#rdm {
+    margin: 20px auto;
+    width: 850px; height: 300px;
     display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 100%;
+    text-align: center;
 }
 
-.heart:after {
+.hide{
+    display: none;
+}
+
+.show{
+    display: inline-block;
+}
+#gif1{
+    top: 50px;
     position: absolute;
-    top: 0;
-    right: -50%;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: 100%;
+    z-index: 1;
 }
-
-@-webkit-keyframes love {
-  0%{top:110%}
+#gif2{
+    top: 200px;
+    position: absolute;
+    z-index: 1;
 }
-@-moz-keyframes love {
-  0%{top:110%}
+#gif3{
+    top: 500px;
+    position: absolute;
+    z-index: 1;
 }
-@-ms-keyframes love {
-  0%{top:110%}
+#gif4{
+    top: 400px;
+    right: 300px;
+    position: absolute;
+    z-index: 1;
 }
-@keyframes love {
-  0%{top:110%}
+#gif5{
+   top: 300px;
+   right: 500px;
 }
-
-
-
+#gif6{
+    top: 400px;
+    right: 30px;
+}

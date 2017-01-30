@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('#vbutton').empty();
     });
 
-    var pageBlack = ['sad', 'gangsta', 'kaway', 'rockstar'],
+    var pageBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
         colorWhite = 'rgb(255, 255, 255)',
         colorBlack = 'rgb(0, 0, 0)';
     
@@ -23,7 +23,7 @@ $(document).ready(function() {
         $('body').addClass('section ' + _val);
         $('section').attr('id', _val);
         $(sectionId).show();
-        $('#sec-Name').text($(this).text());
+        $('#sec-name').text($(this).text());
         $(sectionClass).show();
         
         getGiphy(_val, function(data){

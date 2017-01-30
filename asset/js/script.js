@@ -37,6 +37,10 @@ $(document).ready(function() {
     
     playerPlay(playerAudio, 'pause');
 
+    var pageBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
+        colorWhite = 'rgb(255, 255, 255)',
+        colorBlack = 'rgb(0, 0, 0)';
+    
     $('.button').click(function() {
         var _val = $(this).val(),
             sectionClass = 'section.' + _val,

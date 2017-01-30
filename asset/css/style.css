@@ -123,10 +123,27 @@ main #board button:focus {
     width: 30px;
     height: 65px;
     margin-left: 40px;
+    position: absolute;
+    top: 200px;
 }
 
-#sec-name {
-    
+#main-player{
+    width: 870px;
+    margin: 20px auto 0px auto;
+}
+
+h2#sec-name {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+	text-align: center;
+	padding: 15px 8px;
+    color: rgb(245, 245, 245);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Avenir Next";
+    margin: 11px 13px;
+    display: inline-block;
 }
 
 #name {
@@ -273,8 +290,7 @@ main #board button:focus {
 
 #player {
     width: 790px;
-    background-color: white;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     padding: 17px 25px;
 }
@@ -366,7 +382,7 @@ main #board button:focus {
 
 #rdm {
     margin: 20px auto;
-    width: 850px; height: 300px;
+    width: 850px; height: 400px;
     display: block;
     text-align: center;
 }

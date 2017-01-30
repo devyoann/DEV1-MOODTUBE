@@ -12,7 +12,7 @@ $(document).ready(function() {
     // hover (i feel) button
     $('.button').hover(function() {
         $('#vbutton').text(
-            $(this).val()
+            $(this).text()
         );
     }, function() {
         $('#vbutton').empty();
@@ -24,12 +24,12 @@ $(document).ready(function() {
     
     $('.button').click(function() {
         var _val = $(this).val(),
+            dataSearch = $(this).data('search'),
             sectionClass = 'section.' + _val,
             sectionId = 'section#' + _val,
             backgroundId,
             i,
             shareUrl = url + '#' + _val;
-
         $('main').hide();
         $('section').removeClass('none').addClass(_val).attr('id', _val);
         $('body').addClass('section ' + _val);
@@ -67,9 +67,9 @@ $(document).ready(function() {
             playerAudio.play();
         });
         
-        getGiphy(_val, function(data){
+        getGiphy(dataSearch, function(data){
             var gifAnim = function() {
-                $('img#rdm').attr('src', data.data[randomInt(data.data.length)].images.downsized.url).attr('alt', _val);
+                $('img#rdm').attr('src', data.data[randomInt(data.data.length)].images.downsized.url).attr('alt', dataSearch);
             }
             
             gifAnim();

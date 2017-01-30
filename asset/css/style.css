@@ -8,11 +8,19 @@
     src: url(../font/Avenir-Next.ttc), format('OpenType');
 }
 
+html{
+    min-height: 100%;
+    height: 100%;
+}
+
 body {
     background-color: rgb(245, 245, 245);
     text-transform: uppercase;
     overflow: hidden;
     margin: 0 auto;
+    
+    min-height: 100%;
+    height: 100%;
 }
 
 .none {
@@ -121,8 +129,6 @@ main #board button:focus {
 /* SECTION */
 
 #return {
-    background-image: url(../img/back.svg);
-    background-repeat: no-repeat;
     cursor: pointer;
     width: 30px;
     height: 65px;
@@ -686,6 +692,21 @@ h2#sec-name {
     -moz-animation: backDec 1s ease infinite;
     animation: backDec 1s ease infinite;
 }
+@-webkit-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backDec { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
 
 .section.s90 {
     background: linear-gradient(300deg, #ff00ff, #ef6f35, #fcee21);
@@ -695,6 +716,21 @@ h2#sec-name {
     -moz-animation: backDec 1s ease infinite;
     animation: backDec 1s ease infinite;
 }
+@-webkit-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backDec { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
 
 .section.s2000 {
     background: linear-gradient(300deg, #ff00ff, #ef6f35, #fcee21);

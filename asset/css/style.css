@@ -2,12 +2,10 @@
 /* MAIN */
 
 @import url(../font/Avenir-Next.ttc);
-@import url(../font/Avenir-Next.ttf);
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url(../font/Avenir-Next.ttc) format('OpenType')
-         url(../font/AvenirNext-Bold.ttf) format('TrueType');
+    src: url(../font/Avenir-Next.ttc) format('OpenType');
 }
 
 body {
@@ -15,6 +13,13 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     margin: 0 auto;
+}
+
+.none {
+    display: none;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
 }
 
 header a {
@@ -114,9 +119,14 @@ main #board button:focus {
 #return {
     background-image: url(../img/back.svg);
     background-repeat: no-repeat;
+    cursor: pointer;
     width: 30px;
     height: 65px;
     margin-left: 40px;
+}
+
+#sec-name {
+    
 }
 
 #name {
@@ -203,7 +213,6 @@ main #board button:focus {
     background: -moz-linear-gradient(top, rgba(51, 51, 51, 1) 52%, rgba(57, 0, 14, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
     background: linear-gradient(to bottom, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(51, 51, 51)', endColorstr='rgb(57, 0, 14)', GradientType=0);
 }
 
 .section.trendy {
@@ -219,7 +228,6 @@ main #board button:focus {
     background: -moz-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 58%, rgba(234, 17, 23, 1) 100%);
     background: -webkit-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
     background: linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(0, 91, 151)', endColorstr='rgb(234, 17, 23)', GradientType=1);
 }
 
 .section.moodbooster {
@@ -227,7 +235,6 @@ main #board button:focus {
     background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%, rgba(255, 147, 30, 1) 100%);
     background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(255, 255, 255)', endColorstr='rgb(255, 147, 30)', GradientType=1);
 }
 
 .section.kawai {
@@ -262,11 +269,6 @@ main #board button:focus {
     background-color: rgb(252, 238, 33);
 }
 
-section#2000 {
-    background-color: #fcee21;
-    margin: 120px auto 0 auto;
-}
-
 /* PLAYER */
 
 #player {
@@ -278,7 +280,7 @@ section#2000 {
 }
 
 #playPause {
-    background-image: url('../img/play.svg');
+    background-image: url('../img/pause.svg');
     background-repeat: no-repeat;
     cursor: pointer;
     height: 30px;

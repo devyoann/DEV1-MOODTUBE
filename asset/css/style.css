@@ -584,9 +584,9 @@ h2#sec-name {
     background: linear-gradient(0deg, #000000, #890000, #dd8c05);
     background-size: 600% 600%;
 
-    -webkit-animation: backRock 9s ease infinite;
-    -moz-animation: backRock 9s ease infinite;
-    animation: backRock 9s ease infinite;
+    -webkit-animation: backRock 9s ease-out infinite;
+    -moz-animation: backRock 9s ease-out infinite;
+    animation: backRock 9s ease-out infinite;
 }
     @-webkit-keyframes backRock {
         0%{background-position:51% 0%}

@@ -123,23 +123,31 @@ $(document).ready(function() {
             }
             // Make it rain
             createRain();
-            
+
             $('#gif5').attr('src', 'asset/img/gif/sad/1.gif');
             $('#gif5').removeClass('hide').addClass('show');
             $('#gif6').attr('src', 'asset/img/gif/sad/2.gif');
             $('#gif6').removeClass('hide').addClass('show');
+            $('#gif7').attr('src', 'asset/img/gif/sad/3.gif');
+            $('#gif7').removeClass('hide').addClass('show');
         }
         else if ('happy' == _val){
-            $('#gif1').attr('src', 'asset/img/gif/Sad/cry.gif');
-            $('#gif1').removeClass('hide').addClass('show');
-            $('#gif2').attr('src', 'asset/img/gif/Sad/cry.gif');
-            $('#gif2').removeClass('hide').addClass('show');
+            $('#gif8').attr('src', 'asset/img/gif/happy/1.gif');
+            $('#gif8').removeClass('hide').addClass('show');
+            $('#gif9').attr('src', 'asset/img/gif/happy/2.gif');
+            $('#gif9').removeClass('hide').addClass('show');
+            $('#gif10').attr('src', 'asset/img/gif/happy/3.gif');
+            $('#gif10').removeClass('hide').addClass('show');
         }
         else if ('dancing' == _val){
-            $('#gif1').attr('src', 'asset/img/gif/Sad/cry.gif');
-            $('#gif1').removeClass('hide').addClass('show');
-            $('#gif2').attr('src', 'asset/img/gif/Sad/cry.gif');
-            $('#gif2').removeClass('hide').addClass('show');
+            $('#gif11').attr('src', 'asset/img/gif/dancing/1.gif');
+            $('#gif11').removeClass('hide').addClass('show');
+            $('#gif12').attr('src', 'asset/img/gif/dancing/2.gif');
+            $('#gif12').removeClass('hide').addClass('show');
+            $('#gif13').attr('src', 'asset/img/gif/dancing/3.gif');
+            $('#gif13').removeClass('hide').addClass('show');
+            $('#gif14').attr('src', 'asset/img/gif/dancing/4.gif');
+            $('#gif14').removeClass('hide').addClass('show');
         }
         else if ('chilling' == _val){
             
@@ -205,6 +213,7 @@ $("#sound").attr("id", "sound0");
         clearInterval(IntervalGifAnim);
         $('#heyhey').removeClass('show').addClass('hide');
         $('.gifs').removeClass('show').addClass('hide');
+        $('.drop').remove();
     });
 
     

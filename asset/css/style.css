@@ -446,6 +446,14 @@ h2#sec-name {
     transform: rotate(15deg);
 }
 
+#gif7 {
+    bottom: -30px;
+    right: 10px;
+    width: 350px;
+    position: absolute;
+    transform: rotate(-15deg);
+}
+
 .drop {
   background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
   background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
@@ -465,3 +473,88 @@ h2#sec-name {
 @-moz-keyframes fall {
     to {margin-top:900px;}
 }
+
+/* HAPPY GIF */
+
+#gif8{
+    position: absolute;
+    top: -98px;
+    left: 600px;
+}
+
+#gif9{
+    position: absolute;
+    height: 350px;
+    bottom: -95px;
+    left: -20px;
+}
+
+#gif10{
+    position: absolute;
+    right: 10px;
+    bottom: -78px;
+    height: 750px;
+}
+
+/* DANCING GIF */
+
+#gif11{
+    position: absolute;
+    bottom: -80px;
+    left: 700px;
+    height: 250px;
+}
+
+#gif12{
+    position: absolute;
+    top: -60px;
+    right: 50px;
+    height: 300px;
+}
+
+#gif13{
+    position: absolute;
+    top: 200px;
+    right: 300px;
+}
+
+#gif14{
+    position: absolute;
+    top: 100px;
+    left: -20px;
+}
+
+#gif{
+    position: absolute;
+}
+
+#gif{
+    position: absolute;
+}
+
+#gif{
+
+}
+
+#gif{
+
+}
+
+#gif{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -206,11 +206,11 @@ h2#sec-name {
 .section.sad {
     background: linear-gradient(216deg, #434343, #000000);
     background-size: 400% 400%;
-
     -webkit-animation: backSad 13s ease infinite;
     -moz-animation: backSad 13s ease infinite;
     animation: backSad 13s ease infinite;
 }
+
     @-webkit-keyframes backSad {
         0%{background-position:93% 0%}
         50%{background-position:0% 100%}
@@ -786,7 +786,7 @@ h2#sec-name {
 
 #progressBar {
     height: 4px;
-    width: 376px;
+    width: 360px;
     border-radius: 2px;
     background-color: black;
     opacity: 0.5;
@@ -806,10 +806,11 @@ h2#sec-name {
 }
 
 #soundIcon {
-    background-image: url('../img/sound.svg');
+    background-image: url('../img/sound3.svg');
     cursor: pointer;
     height: 36px;
-    width: 30px;
+    width: 47px;
+    margin-top: 5px;
     margin-right: 12px;
     display: inline-block;
     background-repeat: no-repeat;

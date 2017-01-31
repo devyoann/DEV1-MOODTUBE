@@ -5,10 +5,31 @@ $(document).ready(function() {
         colorBlack = 'rgb(0, 0, 0)',
         playerAudio = $('audio')[0],
         clickPlay = 1,
-        IntervalGifAnim;
+        clickSound = 1,
+        IntervalGifAnim,
+        lestP,
+        dataR;
     
-    playerAudio.pause();
+    // function public
+    var randomInt = function(int) {
+            return Math.floor(Math.random() * int) + 1;
+    },
+        playerPlay = function(i) {
+            if(i == 'play')
+                playerAudio.play();
+            else if(i == 'pause')
+                playerAudio.pause();
+    },
+        playerSound = function(a, i) {
+            if(i == 1)
+                a.volume = 1;
+            else if(i == 0)
+                a.volume = 0;
+    };
 
+    // audio pause
+    playerPlay('pause');
+    
     // hover (i feel) button
     $('.button').hover(function() {
         $('#vbutton').text(
@@ -18,18 +39,20 @@ $(document).ready(function() {
         $('#vbutton').empty();
     });
 
-    var pageBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
-        colorWhite = 'rgb(255, 255, 255)',
-        colorBlack = 'rgb(0, 0, 0)';
-    
+    // function button
     $('.button').click(function() {
+        // private variable
         var _val = $(this).val(),
             dataSearch = $(this).data('search'),
             sectionClass = 'section.' + _val,
             sectionId = 'section#' + _val,
             backgroundId,
             i,
-            shareUrl = url + '#' + _val;
+            shareUrl = url + '#' + _val,
+            tracks = [],
+            el,
+            max;
+
         $('main').hide();
         $('section').removeClass('none').addClass(_val).attr('id', _val);
         $('body').addClass('section ' + _val);
@@ -37,36 +60,55 @@ $(document).ready(function() {
         $('#sec-name').text($(this).text());
         $('.fb-share-button').attr('data-href', shareUrl);
         $('.twitter-share-button').attr('href', shareUrl);
-
-        var randomInt = function(int) {
-            return Math.floor(Math.random() * int) + 1;
-        }
+        // get Spotify api and execute function
         
         getSPotify(_val, function(data) {
             console.log(data);
+            var datalenght = data.tracks.items.length,
+                count = 0,
+            playerNext = function() {
+                max = parseInt(datalenght - 1);
+                el = randomInt(datalenght);
+                    
+                for(var q = 0; q < datalenght; q++) {
+                    if(data.tracks.items[q].track.preview_url != null)
+                        tracks.push(data.tracks.items[q].track.preview_url);
+                }
+                
+                var son = tracks[el];
+                $('audio').attr('src', son);
+                $('source').attr('src', son);
+                
+                playerPlay('play');
+            }
             
+            playerNext();
             
-            var _tpl = [
-                'description : ' + data.description,
-                'follower : ' + data.followers.total,
-                'id : ' + data.id,
-                'images : ' + data.images.url,
-                'public : ' + data.public,
-                'ms : ' + data.tracks.items[randomInt(data.tracks.items.length)].track.duration_ms
-            ].join('<br/>');
-            $('test').html(_tpl);
+            setInterval(playerNext, 30000);
             
+            playerAudio.volume = 0.5;
+            var pv = playerAudio.volume;
             
-            var son = data.tracks.items[randomInt(data.tracks.items.length)].track.preview_url,
-                ms = data.tracks.items[randomInt(data.tracks.items.length)].track.duration_ms,
-                moms = parseInt(moment().format('ms'));
-    
-        
-            $('audio').attr('src', son);
-            $('source').attr('src', son);
-            playerAudio.play();
+            var d = 118 % pv;
+            $('#grabSB').css('left', d);
         });
         
+        var queues = function() {
+            if($(this).attr('id') === 'previous')
+                el = el > 0 ? el-1 : 0;
+            else
+                el = el < max ? el+1 : max;     
+
+            son = tracks[el];
+            console.log(tracks[el]);
+            $('audio').attr('src', son);
+            $('source').attr('src', son);
+            playerPlay('play');
+        }
+    
+        $('#previous, #next').click(queues);
+
+        // get Giphy api and execute function
         getGiphy(dataSearch, function(data){
             var gifAnim = function() {
                 $('img#rdm').attr('src', data.data[randomInt(data.data.length)].images.downsized.url).attr('alt', dataSearch);
@@ -98,10 +140,10 @@ $(document).ready(function() {
         $('header a').css('color', colorBlack);
         $('#time').css('color', colorBlack);
         $('#date').css('color', colorBlack);
+        playerPlay('pause');
         $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('.cls-2').css('fill', '#000');
-        playerAudio.pause();
         $('audio').attr('src', '');
         $('source').attr('src', '');
         clearInterval(IntervalGifAnim);
@@ -109,14 +151,27 @@ $(document).ready(function() {
     
     $('#playPause').click(function() {
         if(clickPlay == 1) {
-            playerAudio.pause();
+            playerPlay('pause');
             clickPlay = 0;
             $(this).css('background-image', 'url(asset/img/play.svg)');
         }
         else if(clickPlay == 0) {
-            playerAudio.play();
+            playerPlay('play');
             clickPlay = 1;
             $(this).css('background-image', 'url(asset/img/pause.svg)');
+        }
+    });
+    
+    $('#soundIcon').click(function() {
+        if(clickSound == 1) {
+            playerSound(playerAudio, 0);
+            clickSound = 0;
+            $(this).css('background-image', 'url(asset/img/soundMute.svg)');
+        }
+        else if(clickSound == 0) {
+            playerSound(playerAudio, 1);
+            clickSound = 1;
+            $(this).css('background-image', 'url(asset/img/sound3.svg)');
         }
     });
 

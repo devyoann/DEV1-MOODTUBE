@@ -6,15 +6,20 @@ var getSPotify = function(id, callback) {
         var _tokenSpotify = JSON.parse(jsonP),
             _playlistID;
         
-        if(id == 'glitter') {
+        if(id == 'glitter')
             _playlistID = '7uDoSz5VxK5lbXgj7tBMG9';
-        }
-        else if(id == 'sad') {
+        
+        else if(id == 'sad')
             _playlistID = '2XuC4mXYHL6ZSorxFFZhLq';
-        }
-        else {
+        
+        else if(id == 'happy')
+            _playlistID = '1V93SRHKAhfJ83uFY8YtAg';
+        
+        else if(id == 'chilling')
+            _playlistID = '65vGP10RuC1rmSu3u66WqB';
+        
+        else
             _playlistID = 'ok';
-        }
         
         $.ajax({
             url: 'https://api.spotify.com/v1/users/spotify/playlists/' + _playlistID,

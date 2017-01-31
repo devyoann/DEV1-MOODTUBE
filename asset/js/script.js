@@ -7,7 +7,8 @@ $(document).ready(function() {
         clickSound = 1,
         IntervalGifAnim,
         lestP,
-        dataR;
+        dataR,
+        musicNext;
     
     // function public
     var randomInt = function(int) {
@@ -85,7 +86,7 @@ $(document).ready(function() {
             
             playerNext();
             
-            setInterval(playerNext, 30000);
+            musicNext = setInterval(playerNext, 30000);
             
             playerAudio.volume = 0.5;
             var pv = playerAudio.volume;
@@ -251,6 +252,7 @@ $(document).ready(function() {
         $('audio').attr('src', '');
         $('source').attr('src', '');
         clearInterval(IntervalGifAnim);
+        clearInterval(musicNext);
         $('#heyhey').removeClass('show').addClass('hide');
         $('.gifs').removeClass('show').addClass('hide');
         $('.drop').remove();

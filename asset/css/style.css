@@ -5,7 +5,12 @@
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url(../font/Avenir-Next.ttc) format('OpenType');
+    src: url(../font/Avenir-Next.ttc), format('OpenType');
+}
+
+html{
+    min-height: 100%;
+    height: 100%;
 }
 
 body {
@@ -13,6 +18,9 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     margin: 0 auto;
+    
+    min-height: 100%;
+    height: 100%;
 }
 
 .none {
@@ -54,6 +62,10 @@ header #clock #time,
     display: inline-block;
     font-family: "Avenir Next";   
     font-size: 18px;
+}
+
+header #clock #time {
+    font-weight: 700;
 }
 
 /* BOARD */
@@ -117,8 +129,6 @@ main #board button:focus {
 /* SECTION */
 
 #return {
-    background-image: url(../img/back.svg);
-    background-repeat: no-repeat;
     cursor: pointer;
     width: 30px;
     height: 65px;
@@ -133,11 +143,10 @@ main #board button:focus {
 }
 
 h2#sec-name {
-    background-color: rgb(0, 0, 0);
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.3);
 	text-align: center;
 	padding: 15px 8px;
-    color: rgb(245, 245, 245);
+    color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
@@ -163,17 +172,88 @@ h2#sec-name {
 
 /* SECTIONS */
 
+
+    /*GLITTER*/
+
 .section.glitter {
-    background-color: rgb(255, 20, 147);
+    background: linear-gradient(270deg, #ff1493, #ff0058, #dd39c8);
+    background-size: 600% 600%;
+
+    -webkit-animation: backGlitter 13s ease infinite;
+    -moz-animation: backGlitter 13s ease infinite;
+    animation: backGlitter 13s ease infinite;
 }
+
+    @-webkit-keyframes backGlitter {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes backGlitter {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes backGlitter { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+
+    /*SAD*/
 
 .section.sad {
-    background-color: rgb(35, 35, 35);
+    background: linear-gradient(216deg, #434343, #000000);
+    background-size: 400% 400%;
+    -webkit-animation: backSad 13s ease infinite;
+    -moz-animation: backSad 13s ease infinite;
+    animation: backSad 13s ease infinite;
 }
 
+    @-webkit-keyframes backSad {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backSad {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backSad { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*HAPPY*/
+
 .section.happy {
-    background-color: rgb(255, 252, 125);
+    background: linear-gradient(216deg, #ffd800, #e3f21b, #fdef29);
+    background-size: 600% 600%;
+
+    -webkit-animation: backHappy 6s ease infinite;
+    -moz-animation: backHappy 6s ease infinite;
+    animation: backHappy 6s ease infinite;
 }
+    @-webkit-keyframes backHappy {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backHappy {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backHappy { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*DANCING*/
 
 .section.dancing {
     background: linear-gradient(228deg, rgb(221, 44, 44), rgb(243, 193, 36), rgb(79, 223, 13), rgb(39, 205, 206), rgb(43, 39, 206), rgb(249, 18, 200));
@@ -205,92 +285,481 @@ h2#sec-name {
         100%{background-position:0% 97%}
     }
 
+    /*CHILLING*/
+
 .section.chilling {
-    background-color: rgb(135, 203, 244);
+    background: linear-gradient(216deg, #f7f5e7, #b0fffc);
+    background-size: 400% 400%;
+
+    -webkit-animation: backChill 6s ease infinite;
+    -moz-animation: backChill 6s ease infinite;
+    animation: backChill 6s ease infinite;
 }
+
+    @-webkit-keyframes backChill {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backChill {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backChill { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*WORKING*/
 
 .section.working {
-    background-color: rgb(255, 157, 157);
+    background: linear-gradient(216deg, #ff988d, #fd4238);
+    background-size: 400% 400%;
+
+    -webkit-animation: backWork 6s ease infinite;
+    -moz-animation: backWork 6s ease infinite;
+    animation: backWork 6s ease infinite;
 }
+
+    @-webkit-keyframes backWork {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backWork {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backWork { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*SPORTY*/
 
 .section.sporty {
-    background-color: rgb(140, 198, 63);
+    background: linear-gradient(216deg, #43aa09, #fdaa38);
+    background-size: 400% 400%;
+
+    -webkit-animation: backSport 2s ease infinite;
+    -moz-animation: backSport 2s ease infinite;
+    animation: backSport 2s ease infinite;
 }
+
+    @-webkit-keyframes backSport {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backSport {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backSport { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*SEXUAL*/
 
 .section.sexual {
-    background-color: rgb(202, 0, 27);
+    background: linear-gradient(216deg, #aa0909, #dd088a, #e4082d);
+    background-size: 600% 600%;
+
+    -webkit-animation: backSex 5s ease infinite;
+    -moz-animation: backSex 5s ease infinite;
+    animation: backSex 5s ease infinite;
 }
+    @-webkit-keyframes backSex {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backSex {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backSex { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*TRAVEL*/
 
 .section.travelling {
-    background-color: rgb(0, 237, 185);
+    background: linear-gradient(216deg, #0ad497, #08dbdd, #55a850);
+    background-size: 600% 600%;
+
+    -webkit-animation: backTravel 5s ease infinite;
+    -moz-animation: backTravel 5s ease infinite;
+    animation: backTravel 5s ease infinite;
 }
+
+    @-webkit-keyframes backTravel {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backTravel {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backTravel { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*GANGSTA*/
 
 .section.gangsta {
-    background: rgb(51, 51, 51);
-    background: -moz-linear-gradient(top, rgba(51, 51, 51, 1) 52%, rgba(57, 0, 14, 1) 100%);
-    background: -webkit-linear-gradient(top, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
-    background: linear-gradient(to bottom, rgba(51, 51, 51, 1) 52%,rgba(57, 0, 14, 1) 100%);
+    background: linear-gradient(216deg, #181818, #670505);
+    background-size: 400% 400%;
+
+    -webkit-animation: backGangsta 5s ease infinite;
+    -moz-animation: backGangsta 5s ease infinite;
+    animation: backGangsta 5s ease infinite;
 }
+
+@-webkit-keyframes backGangsta {
+    0%{background-position:93% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:93% 0%}
+}
+@-moz-keyframes backGangsta {
+    0%{background-position:93% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:93% 0%}
+}
+@keyframes backGangsta { 
+    0%{background-position:93% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:93% 0%}
+}
+
+    /*TRENDY*/
 
 .section.trendy {
-    background-color: rgb(237, 30, 121);
+    background: linear-gradient(216deg, #c600ad, #1896aa, #e4c82c);
+    background-size: 600% 600%;
+
+    -webkit-animation: backTrendy 5s ease infinite;
+    -moz-animation: backTrendy 5s ease infinite;
+    animation: backTrendy 5s ease infinite;
 }
+
+    @-webkit-keyframes backTrendy {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @-moz-keyframes backTrendy {
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+    @keyframes backTrendy { 
+        0%{background-position:93% 0%}
+        50%{background-position:0% 100%}
+        100%{background-position:93% 0%}
+    }
+
+    /*TGIF*/
 
 .section.tgif {
-    background-color: rgb(0, 255, 255);
+    background: linear-gradient(91deg, #fffa00, #e700ff);
+    background-size: 400% 400%;
+
+    -webkit-animation: backTrendy 2s ease infinite;
+    -moz-animation: backTrendy 2s ease infinite;
+    animation: backTrendy 2s ease infinite;
 }
+    @-webkit-keyframes backTrendy {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes backTrendy {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes backTrendy { 
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+
+    /*FRENCHY*/
 
 .section.frenchy {
-    background: rgb(0, 91, 151);
-    background: -moz-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 58%, rgba(234, 17, 23, 1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
-    background: linear-gradient(45deg, rgba(0, 91, 151, 1) 0%,rgba(255, 255, 255, 1) 43%,rgba(255, 255, 255, 1) 58%,rgba(234, 17, 23, 1) 100%);
+    background: linear-gradient(91deg, #00aeff, #ffffff, #ff0000);
+    background-size: 600% 600%;
+
+    -webkit-animation: backFrench 11s ease infinite;
+    -moz-animation: backFrench 11s ease infinite;
+    animation: backFrench 11s ease infinite;
 }
+
+    @-webkit-keyframes backFrench {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes backFrench {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes backFrench { 
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+
+    /*MOODBOOSTER*/
 
 .section.moodbooster {
-    background: rgb(255, 255, 255);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%, rgba(255, 147, 30, 1) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 10%,rgba(255, 147, 30, 1) 100%);
+    background: linear-gradient(324deg, #ffe300, #ffc47f, #ff8900);
+    background-size: 600% 600%;
+
+    -webkit-animation: backMood 2s ease infinite;
+    -moz-animation: backMood 2s ease infinite;
+    animation: backMood 2s ease infinite;
 }
+    @-webkit-keyframes backMood {
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+    @-moz-keyframes backMood {
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+    @keyframes backMood { 
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+
+    /*KAWAI*/
 
 .section.kawai {
-    background-color: rgb(27, 20, 100);
+    background: linear-gradient(271deg, #230090, #3f0089, #001d58);
+    background-size: 600% 600%;
+
+    -webkit-animation: backKawai 9s ease infinite;
+    -moz-animation: backKawai 9s ease infinite;
+    animation: backKawai 9s ease infinite;
 }
+    @-webkit-keyframes backKawai {
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+    @-moz-keyframes backKawai {
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+    @keyframes backKawai { 
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+
+    /*ROCKSTAR*/
 
 .section.rockstar {
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(0deg, #000000, #890000, #dd8c05);
+    background-size: 600% 600%;
+
+    -webkit-animation: backRock 9s ease infinite;
+    -moz-animation: backRock 9s ease infinite;
+    animation: backRock 9s ease infinite;
 }
+    @-webkit-keyframes backRock {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @-moz-keyframes backRock {
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+    @keyframes backRock { 
+        0%{background-position:51% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:51% 0%}
+    }
+
+    /*JAZZ*/
 
 .section.jazzy {
-    background-color: rgb(115, 99, 87);
+    background: linear-gradient(300deg, #ffe300, #d5b500, #a3812d, #d5b500, #ffe300);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: backJazz 14s ease infinite;
+    -moz-animation: backJazz 14s ease infinite;
+    animation: backJazz 14s ease infinite;
 }
+    @-webkit-keyframes backJazz {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backJazz {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backJazz { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+
+    /*COUNTRY*/
 
 .section.country {
-    background-color: rgb(140, 98, 57);
+    background: linear-gradient(300deg, #895d15, #d5a43f);
+    background-size: 400% 400%;
+
+    -webkit-animation: backCountry 2s ease infinite;
+    -moz-animation: backCountry 2s ease infinite;
+    animation: backCountry 2s ease infinite;
 }
+    @-webkit-keyframes backCountry {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backCountry {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backCountry { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+
+    /*BLESSED*/
 
 .section.blessed {
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(300deg, #ffffff, #d0f8ff);
+    background-size: 400% 400%;
+
+    -webkit-animation: backBlessed 33s ease infinite;
+    -moz-animation: backBlessed 33s ease infinite;
+    animation: backBlessed 33s ease infinite;
 }
+    @-webkit-keyframes backBlessed {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backBlessed {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backBlessed { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+
+    /*DECENNIES*/
 
 .section.s80 {
-    background-color: rgb(255, 0, 255);
+    background: linear-gradient(300deg, #ff00ff, #ef6f35, #fcee21);
+    background-size: 600% 600%;
+
+    -webkit-animation: backDec 1s ease infinite;
+    -moz-animation: backDec 1s ease infinite;
+    animation: backDec 1s ease infinite;
 }
+@-webkit-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backDec { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
 
 .section.s90 {
-    background-color: rgb(239, 111, 53);
+    background: linear-gradient(300deg, #ff00ff, #ef6f35, #fcee21);
+    background-size: 600% 600%;
+
+    -webkit-animation: backDec 1s ease infinite;
+    -moz-animation: backDec 1s ease infinite;
+    animation: backDec 1s ease infinite;
 }
+@-webkit-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backDec { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
 
 .section.s2000 {
-    background-color: rgb(252, 238, 33);
-}
+    background: linear-gradient(300deg, #ff00ff, #ef6f35, #fcee21);
+    background-size: 600% 600%;
 
+    -webkit-animation: backDec 1s ease infinite;
+    -moz-animation: backDec 1s ease infinite;
+    animation: backDec 1s ease infinite;
+}
+    @-webkit-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @-moz-keyframes backDec {
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
+    @keyframes backDec { 
+        0%{background-position:26% 0%}
+        50%{background-position:75% 100%}
+        100%{background-position:26% 0%}
+    }
 /* PLAYER */
 
 #player {
     width: 790px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     padding: 17px 25px;
 }

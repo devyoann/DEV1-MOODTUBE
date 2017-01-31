@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // variable public
-    var pagesBlack = ['sad', 'gangsta', 'kaway', 'rockstar'],
+    var pagesBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
         colorWhite = 'rgb(255, 255, 255)',
         colorBlack = 'rgb(0, 0, 0)',
         playerAudio = $('audio')[0],
@@ -33,7 +33,7 @@ $(document).ready(function() {
     // hover (i feel) button
     $('.button').hover(function() {
         $('#vbutton').text(
-            $(this).val()
+            $(this).text()
         );
     }, function() {
         $('#vbutton').empty();
@@ -43,6 +43,7 @@ $(document).ready(function() {
     $('.button').click(function() {
         // private variable
         var _val = $(this).val(),
+            dataSearch = $(this).data('search'),
             sectionClass = 'section.' + _val,
             sectionId = 'section#' + _val,
             backgroundId,
@@ -106,15 +107,11 @@ $(document).ready(function() {
         }
     
         $('#previous, #next').click(queues);
-        
+
         // get Giphy api and execute function
-        getGiphy(_val, function(data){
-            console.log(data);
+        getGiphy(dataSearch, function(data){
             var gifAnim = function() {
-                dataR = data.data[randomInt(data.data.length)];
-                $('img#rdm').
-                    attr('src', dataR.images.original.url).
-                    attr('alt', _val);
+                $('img#rdm').attr('src', data.data[randomInt(data.data.length)].images.downsized.url).attr('alt', dataSearch);
             }
             
             gifAnim();
@@ -127,6 +124,9 @@ $(document).ready(function() {
                 $('header a').css('color', colorWhite);
                 $('#time').css('color', colorWhite);
                 $('#date').css('color', colorWhite);
+                $('#sec-name').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('#player').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('.cls-2').css('fill', '#FFF');
             }
         }
     });
@@ -141,6 +141,9 @@ $(document).ready(function() {
         $('#time').css('color', colorBlack);
         $('#date').css('color', colorBlack);
         playerPlay('pause');
+        $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
+        $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
+        $('.cls-2').css('fill', '#000');
         $('audio').attr('src', '');
         $('source').attr('src', '');
         clearInterval(IntervalGifAnim);

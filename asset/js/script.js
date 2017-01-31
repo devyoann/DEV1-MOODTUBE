@@ -56,6 +56,8 @@ $(document).ready(function() {
         $('main').hide();
         $('section').removeClass('none').addClass(_val).attr('id', _val);
         $('body').addClass('section ' + _val);
+        $('section').attr('id', _val);
+        $(sectionClass).show();
         $(sectionId).show();
         $('#sec-name').text($(this).text());
         $('.fb-share-button').attr('data-href', shareUrl);
@@ -129,7 +131,116 @@ $(document).ready(function() {
                 $('.cls-2').css('fill', '#FFF');
             }
         }
+
+        if ('glitter' == _val){
+            $('#gif1').attr('src', 'asset/img/gif/glitter/1.gif');
+            $('#gif1').removeClass('hide').addClass('show');
+            $('#gif2').attr('src', 'asset/img/gif/glitter/2.gif');
+            $('#gif2').removeClass('hide').addClass('show');
+            $('#gif3').attr('src', 'asset/img/gif/glitter/3.gif');
+            $('#gif3').removeClass('hide').addClass('show');
+            $('#gif4').attr('src', 'asset/img/gif/glitter/4.gif');
+            $('#gif4').removeClass('hide').addClass('show');
+        }
+        else if ('sad' == _val){
+            $('body').addClass('rain');
+            // number of drops created.
+            var nbDrop = 550; 
+
+            // function to generate a random number range.
+            function randRange( minNum, maxNum) {
+              return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+            }
+
+            // function to generate drops
+            function createRain() {
+
+                for( i=1;i<nbDrop;i++) {
+                var dropLeft = randRange(0,1600);
+                var dropTop = randRange(-1000,1400);
+
+                $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
+                $('#drop'+i).css('left',dropLeft);
+                $('#drop'+i).css('top',dropTop);
+                }
+
+            }
+            // Make it rain
+            createRain();
+
+            $('#gif5').attr('src', 'asset/img/gif/sad/1.gif');
+            $('#gif5').removeClass('hide').addClass('show');
+            $('#gif6').attr('src', 'asset/img/gif/sad/2.gif');
+            $('#gif6').removeClass('hide').addClass('show');
+            $('#gif7').attr('src', 'asset/img/gif/sad/3.gif');
+            $('#gif7').removeClass('hide').addClass('show');
+        }
+        else if ('happy' == _val){
+            $('#gif8').attr('src', 'asset/img/gif/happy/1.gif');
+            $('#gif8').removeClass('hide').addClass('show');
+            $('#gif9').attr('src', 'asset/img/gif/happy/2.gif');
+            $('#gif9').removeClass('hide').addClass('show');
+            $('#gif10').attr('src', 'asset/img/gif/happy/3.gif');
+            $('#gif10').removeClass('hide').addClass('show');
+        }
+        else if ('dancing' == _val){
+            $('#gif11').attr('src', 'asset/img/gif/dancing/1.gif');
+            $('#gif11').removeClass('hide').addClass('show');
+            $('#gif12').attr('src', 'asset/img/gif/dancing/2.gif');
+            $('#gif12').removeClass('hide').addClass('show');
+            $('#gif13').attr('src', 'asset/img/gif/dancing/3.gif');
+            $('#gif13').removeClass('hide').addClass('show');
+            $('#gif14').attr('src', 'asset/img/gif/dancing/4.gif');
+            $('#gif14').removeClass('hide').addClass('show');
+        }
+        else if ('chilling' == _val){
+            
+        }
+        else if ('working' == _val){
+            
+        }
+        else if ('sporty' == _val){
+            
+        }
+        else if ('sexual' == _val){
+            
+        }
+        else if ('travelling' == _val){
+            
+        }
+        else if ('gangsta' == _val){
+            
+        }
+        else if ('trendy' == _val){
+            
+        }
+        else if ('tgif' == _val){
+            
+        }
+        else if ('kawai' == _val){
+            
+            
+        }
+
+
     });
+
+$("#board button")
+  .each(function(i) {
+    if (i != 0) {
+      $("#sound")
+        .clone()
+        .attr("id", "sound" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beep", i);
+  })
+  .mouseenter(function() {
+    console.log($(this).data('beep'))
+    $("#sound" + $(this).data("beep"))[0].play();
+  });
+$("#sound").attr("id", "sound0");
+
     
     $('#return').click(function() {
         $('main').show();
@@ -147,7 +258,11 @@ $(document).ready(function() {
         $('audio').attr('src', '');
         $('source').attr('src', '');
         clearInterval(IntervalGifAnim);
+        $('#heyhey').removeClass('show').addClass('hide');
+        $('.gifs').removeClass('show').addClass('hide');
+        $('.drop').remove();
     });
+
     
     $('#playPause').click(function() {
         if(clickPlay == 1) {

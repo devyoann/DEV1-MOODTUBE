@@ -1,8 +1,7 @@
 $(document).ready(function() {
     // variable public
     var pagesBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
-        colorWhite = 'rgb(255, 255, 255)',
-        colorBlack = 'rgb(0, 0, 0)',
+        colorRGB = ['rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'rgba(255, 255, 255,0.3)'],
         playerAudio = $('audio')[0],
         clickPlay = 1,
         clickSound = 1,
@@ -123,16 +122,16 @@ $(document).ready(function() {
     
         for(i = 0; i < pagesBlack.length; i++) {
             if(pagesBlack[i] == _val) {
-                $('header a').css('color', colorWhite);
-                $('#time').css('color', colorWhite);
-                $('#date').css('color', colorWhite);
-                $('#sec-name').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
-                $('#player').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('header a').css('color', colorRGB[0]);
+                $('#time').css('color', colorRGB[0]);
+                $('#date').css('color', colorRGB[0]);
+                $('#sec-name').css('backgroundColor', colorRGB[2]);
+                $('#player').css('backgroundColor', colorRGB[2]);
                 $('.cls-2').css('fill', '#FFF');
             }
         }
 
-        if ('glitter' == _val){
+        if ('glitter' == _val) {
             $('#gif1').attr('src', 'asset/img/gif/glitter/1.gif');
             $('#gif1').removeClass('hide').addClass('show');
             $('#gif2').attr('src', 'asset/img/gif/glitter/2.gif');
@@ -142,7 +141,7 @@ $(document).ready(function() {
             $('#gif4').attr('src', 'asset/img/gif/glitter/4.gif');
             $('#gif4').removeClass('hide').addClass('show');
         }
-        else if ('sad' == _val){
+        else if ('sad' == _val) {
             $('body').addClass('rain');
             // number of drops created.
             var nbDrop = 550; 
@@ -175,7 +174,7 @@ $(document).ready(function() {
             $('#gif7').attr('src', 'asset/img/gif/sad/3.gif');
             $('#gif7').removeClass('hide').addClass('show');
         }
-        else if ('happy' == _val){
+        else if ('happy' == _val) {
             $('#gif8').attr('src', 'asset/img/gif/happy/1.gif');
             $('#gif8').removeClass('hide').addClass('show');
             $('#gif9').attr('src', 'asset/img/gif/happy/2.gif');
@@ -183,7 +182,7 @@ $(document).ready(function() {
             $('#gif10').attr('src', 'asset/img/gif/happy/3.gif');
             $('#gif10').removeClass('hide').addClass('show');
         }
-        else if ('dancing' == _val){
+        else if ('dancing' == _val) {
             $('#gif11').attr('src', 'asset/img/gif/dancing/1.gif');
             $('#gif11').removeClass('hide').addClass('show');
             $('#gif12').attr('src', 'asset/img/gif/dancing/2.gif');
@@ -193,64 +192,58 @@ $(document).ready(function() {
             $('#gif14').attr('src', 'asset/img/gif/dancing/4.gif');
             $('#gif14').removeClass('hide').addClass('show');
         }
-        else if ('chilling' == _val){
+        else if ('chilling' == _val) {
             
         }
-        else if ('working' == _val){
+        else if ('working' == _val) {
             
         }
-        else if ('sporty' == _val){
+        else if ('sporty' == _val) {
             
         }
-        else if ('sexual' == _val){
+        else if ('sexual' == _val) {
             
         }
-        else if ('travelling' == _val){
+        else if ('travelling' == _val) {
             
         }
-        else if ('gangsta' == _val){
+        else if ('gangsta' == _val) {
             
         }
-        else if ('trendy' == _val){
+        else if ('trendy' == _val) {
             
         }
-        else if ('tgif' == _val){
+        else if ('tgif' == _val) {
             
         }
-        else if ('kawai' == _val){
-            
-            
+        else if ('kawai' == _val) {
+              
         }
-
-
     });
 
-$("#board button")
-  .each(function(i) {
-    if (i != 0) {
-      $("#sound")
-        .clone()
-        .attr("id", "sound" + i)
-        .appendTo($(this).parent());
-    }
-    $(this).data("beep", i);
-  })
-  .mouseenter(function() {
-    console.log($(this).data('beep'))
-    $("#sound" + $(this).data("beep"))[0].play();
-  });
-$("#sound").attr("id", "sound0");
+    $('#board button').each(function(i) {
+        if(i != 0) {
+            $('#sound')
+                .clone()
+                .attr('id', 'sound' + i)
+                .appendTo($(this).parent());
+        }
+        $(this).data('beep', i);
+    }).mouseenter(function() {
+        $('#sound' + $(this).data('beep'))[0].play();
+    });
 
-    
+    $('#sound').attr('id', 'sound0');
+
     $('#return').click(function() {
         $('main').show();
         $('section').addClass('none').hide();
         $('img#rdm').attr('src', '').attr('alt', 'moodtube');
         $('#rs').empty();
         $('body').removeClass();
-        $('header a').css('color', colorBlack);
-        $('#time').css('color', colorBlack);
-        $('#date').css('color', colorBlack);
+        $('header a').css('color', colorRGB[1]);
+        $('#time').css('color', colorRGB[1]);
+        $('#date').css('color', colorRGB[1]);
         playerPlay('pause');
         $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
@@ -263,7 +256,6 @@ $("#sound").attr("id", "sound0");
         $('.drop').remove();
     });
 
-    
     $('#playPause').click(function() {
         if(clickPlay == 1) {
             playerPlay('pause');

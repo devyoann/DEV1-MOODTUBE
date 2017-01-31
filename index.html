@@ -3,9 +3,11 @@
 <head>
     <!-- title -->
     <meta charset="UTF-8">
+    
     <title>MoodTube - How do you feel today ?</title>
 
     <!-- meta description -->
+    <meta name="google" value="notranslate">
 	<meta name="author" content="Yoann Di Maria, Matthieu Vignolle & Thibault Germain">
 	<meta name="description" content="MoodTube.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,6 +83,11 @@
     <test></test>
     <!-- section -->
     <section class="none">
+        <style>
+            #soundIcon {
+                fill: #ffffff;
+            }
+        </style>
         <audio class="none">
             <source type="audio/mp3">
         </audio>
@@ -100,10 +107,9 @@
                 </div>
                 <div id="playlist"></div>
             </div>
-            <img id="rdm" src="" alt="">
+            <img id="rdm">
         </div>
 
-        
         <!-- button share Facebook and Twitter -->
         <div id="fb-root"></div>
         <script>
@@ -131,7 +137,6 @@
         </script>
         <div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8888%2F%23glitter&amp;src=sdkpreparse">Share</a></div>
         <a class="twitter-share-button" href="">Share</a>
-        <img id="rdm">
     </section>
 </body>
 </html>

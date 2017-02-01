@@ -1,5 +1,4 @@
-<img src="http://ecole-webstart.com/wp-content/uploads/2016/02/geek-ecole-webstart.jpg" style="width: 700px;">
-
+![Banner](http://ecole-webstart.com/wp-content/uploads/2016/02/geek-ecole-webstart.jpg)
 ## MOODTUBE
 
 Yoann Di Maria - development student at [Webstart][1].
@@ -20,7 +19,7 @@ Then open `index.html` in Safari by preference. It might have some bugs with oth
 
 ### Progress
 
-V1 is coming soon..
+**V1** is coming soon..
 
 ### Scoring
 
@@ -33,18 +32,12 @@ ___
 
 ### Contact
 
-[dm.yoann@gmail.com](mailto:dm.yoann@gmail.com)
-
-[https://github.com/ohyoyo](https://github.com/ohyoyo)
-
-[thibault.germain7@gmail.com](mailto:thibault.germain7@gmail.com)
-
-[https://github.com/Thibgr](https://github.com/Thibgr)
-
-[vignolle.matthieu@gmail.com](mailto:vignolle.matthieu@gmail.com)
-
-[https://github.com/Mayeunaise](https://github.com/Mayeunaise)
-
+Yoann Di Maria : [@ohyoyo](https://github.com/ohyoyo)
+[![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:dm.yoann@gmail.com) [![Contact](https://img.shields.io/badge/Contact-Site%20Web-54ba4e.svg)](http://yoanndm.fr) [![Contact](https://img.shields.io/badge/Contact-LinkedIn-0084bf.svg)](http://yoanndm.fr)
+Thibault Germain : [@Thibgr](https://github.com/Thibgr)
+[![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:thibault.germain7@gmail.com)
+Matthieu Vignolle : [@Mayeunaise](https://github.com/Mayeunaise)
+[![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:vignolle.matthieu@gmail.com) 
 ---
 
 © Yoann Di Maria , Webstart - Paris
@@ -54,4 +47,3 @@ ___
 [3]: https://www.spotify.com/fr/
 [4]: http://giphy.com
 [5]: https://www.youtube.com
-

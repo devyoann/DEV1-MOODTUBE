@@ -102,7 +102,6 @@ $(document).ready(function() {
                 el = el < max ? el+1 : max;     
 
             son = tracks[el];
-            console.log(tracks[el]);
             $('audio').attr('src', son);
             $('source').attr('src', son);
             playerPlay('play');
@@ -133,14 +132,28 @@ $(document).ready(function() {
         }
 
         if ('glitter' == _val) {
-            $('#gif1').attr('src', 'asset/img/gif/glitter/1.gif');
-            $('#gif1').removeClass('hide').addClass('show');
-            $('#gif2').attr('src', 'asset/img/gif/glitter/2.gif');
-            $('#gif2').removeClass('hide').addClass('show');
-            $('#gif3').attr('src', 'asset/img/gif/glitter/3.gif');
-            $('#gif3').removeClass('hide').addClass('show');
-            $('#gif4').attr('src', 'asset/img/gif/glitter/4.gif');
-            $('#gif4').removeClass('hide').addClass('show');
+            $('#gifabsolute').append(
+                '<img id="gif1" class="gifs hide" />' +
+                '<img id="gif2" class="gifs hide" />' +
+                '<img id="gif3" class="gifs hide" />' +
+                '<img id="gif4" class="gifs hide" />'
+            );
+            $('#gif1')
+                .attr('src', 'asset/img/gif/glitter/1.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif2')
+                .attr('src', 'asset/img/gif/glitter/2.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif3')
+                .attr('src', 'asset/img/gif/glitter/3.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif4')
+                .attr('src', 'asset/img/gif/glitter/4.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
         else if ('sad' == _val) {
             $('body').addClass('rain');
@@ -154,44 +167,79 @@ $(document).ready(function() {
 
             // function to generate drops
             function createRain() {
+                for(i = 1; i < nbDrop; i++) {
+                var dropLeft = randRange(0, 1600);
+                var dropTop = randRange(-1000, 1400);
 
-                for( i=1;i<nbDrop;i++) {
-                var dropLeft = randRange(0,1600);
-                var dropTop = randRange(-1000,1400);
-
-                $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
-                $('#drop'+i).css('left',dropLeft);
-                $('#drop'+i).css('top',dropTop);
+                $('.rain').append('<div class="drop" id="drop' + i + '"></div>');
+                $('#drop' + i).css('left', dropLeft);
+                $('#drop' + i).css('top', dropTop);
                 }
-
             }
             // Make it rain
             createRain();
-
-            $('#gif5').attr('src', 'asset/img/gif/sad/1.gif');
-            $('#gif5').removeClass('hide').addClass('show');
-            $('#gif6').attr('src', 'asset/img/gif/sad/2.gif');
-            $('#gif6').removeClass('hide').addClass('show');
-            $('#gif7').attr('src', 'asset/img/gif/sad/3.gif');
-            $('#gif7').removeClass('hide').addClass('show');
+            
+            $('#gifabsolute').append(
+                '<img id="gif5" class="gifs hide" />' +
+                '<img id="gif6" class="gifs hide" />' +
+                '<img id="gif7" class="gifs hide" />'
+            );
+            
+            $('#gif5')
+                .attr('src', 'asset/img/gif/sad/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif6')
+                .attr('src', 'asset/img/gif/sad/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif7')
+                .attr('src', 'asset/img/gif/sad/3.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
         else if ('happy' == _val) {
-            $('#gif8').attr('src', 'asset/img/gif/happy/1.gif');
-            $('#gif8').removeClass('hide').addClass('show');
-            $('#gif9').attr('src', 'asset/img/gif/happy/2.gif');
-            $('#gif9').removeClass('hide').addClass('show');
-            $('#gif10').attr('src', 'asset/img/gif/happy/3.gif');
-            $('#gif10').removeClass('hide').addClass('show');
+            $('#gifabsolute').append(
+                '<img id="gif8" class="gifs hide" />' +
+                '<img id="gif9" class="gifs hide" />' +
+                '<img id="gif10" class="gifs hide" />'
+            );
+            $('#gif8')
+                .attr('src', 'asset/img/gif/happy/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif9')
+                .attr('src', 'asset/img/gif/happy/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif10')
+                .attr('src', 'asset/img/gif/happy/3.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
         else if ('dancing' == _val) {
-            $('#gif11').attr('src', 'asset/img/gif/dancing/1.gif');
-            $('#gif11').removeClass('hide').addClass('show');
-            $('#gif12').attr('src', 'asset/img/gif/dancing/2.gif');
-            $('#gif12').removeClass('hide').addClass('show');
-            $('#gif13').attr('src', 'asset/img/gif/dancing/3.gif');
-            $('#gif13').removeClass('hide').addClass('show');
-            $('#gif14').attr('src', 'asset/img/gif/dancing/4.gif');
-            $('#gif14').removeClass('hide').addClass('show');
+            $('#gifabsolute').append(
+                '<img id="gif11" class="gifs hide" />' +
+                '<img id="gif12" class="gifs hide" />' +
+                '<img id="gif13" class="gifs hide" />' +
+                '<img id="gif14" class="gifs hide" />'
+            );
+            $('#gif11')
+                .attr('src', 'asset/img/gif/dancing/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif12')
+                .attr('src', 'asset/img/gif/dancing/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif13')
+                .attr('src', 'asset/img/gif/dancing/3.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif14')
+                .attr('src', 'asset/img/gif/dancing/4.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
         else if ('chilling' == _val) {
             
@@ -256,6 +304,7 @@ $(document).ready(function() {
         $('#heyhey').removeClass('show').addClass('hide');
         $('.gifs').removeClass('show').addClass('hide');
         $('.drop').remove();
+        $('#gifabsolute').empty();
     });
 
     $('#playPause').click(function() {

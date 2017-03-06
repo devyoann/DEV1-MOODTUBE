@@ -242,7 +242,28 @@ $(document).ready(function() {
                 .addClass('show');
         }
         else if ('chilling' == _val) {
-            
+            $('#gifabsolute').append(
+                '<img id="gif1" class="gifs hide" />' +
+                '<img id="gif2" class="gifs hide" />' +
+                '<img id="gif3" class="gifs hide" />' +
+                '<img id="gif4" class="gifs hide" />'
+            );
+            $('#gif1')
+                .attr('src', 'asset/img/gif/glitter/1.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif2')
+                .attr('src', 'asset/img/gif/glitter/2.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif3')
+                .attr('src', 'asset/img/gif/glitter/3.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif4')
+                .attr('src', 'asset/img/gif/glitter/4.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
         else if ('working' == _val) {
             
@@ -251,6 +272,7 @@ $(document).ready(function() {
             
         }
         else if ('sexual' == _val) {
+            $('body').addClass('bg_heart');
             
         }
         else if ('travelling' == _val) {

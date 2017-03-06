@@ -243,10 +243,10 @@ $(document).ready(function() {
         }
         else if ('chilling' == _val) {
             $('#gifabsolute').append(
-                '<img id="gif1" class="gifs hide" />' +
-                '<img id="gif2" class="gifs hide" />' +
-                '<img id="gif3" class="gifs hide" />' +
-                '<img id="gif4" class="gifs hide" />'
+                '<img id="gif15" class="gifs hide" />' +
+                '<img id="gif16" class="gifs hide" />' +
+                '<img id="gif17" class="gifs hide" />' +
+                '<img id="gif18" class="gifs hide" />'
             );
             $('#gif1')
                 .attr('src', 'asset/img/gif/glitter/1.gif')

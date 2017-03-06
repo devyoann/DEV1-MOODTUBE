@@ -1,8 +1,7 @@
 $(document).ready(function() {
     // variable public
     var pagesBlack = ['sad', 'gangsta', 'kawai', 'rockstar'],
-        colorWhite = 'rgb(255, 255, 255)',
-        colorBlack = 'rgb(0, 0, 0)',
+        colorRGB = ['rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'rgba(255, 255, 255,0.3)'],
         playerAudio = $('audio')[0],
         clickPlay = 1,
         clickSound = 1,
@@ -103,7 +102,6 @@ $(document).ready(function() {
                 el = el < max ? el+1 : max;     
 
             son = tracks[el];
-            console.log(tracks[el]);
             $('audio').attr('src', son);
             $('source').attr('src', son);
             playerPlay('play');
@@ -124,26 +122,40 @@ $(document).ready(function() {
     
         for(i = 0; i < pagesBlack.length; i++) {
             if(pagesBlack[i] == _val) {
-                $('header a').css('color', colorWhite);
-                $('#time').css('color', colorWhite);
-                $('#date').css('color', colorWhite);
-                $('#sec-name').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
-                $('#player').css('backgroundColor', 'rgba(255, 255, 255,0.3)');
+                $('header a').css('color', colorRGB[0]);
+                $('#time').css('color', colorRGB[0]);
+                $('#date').css('color', colorRGB[0]);
+                $('#sec-name').css('backgroundColor', colorRGB[2]);
+                $('#player').css('backgroundColor', colorRGB[2]);
                 $('.cls-2').css('fill', '#FFF');
             }
         }
 
-        if ('glitter' == _val){
-            $('#gif1').attr('src', 'asset/img/gif/glitter/1.gif');
-            $('#gif1').removeClass('hide').addClass('show');
-            $('#gif2').attr('src', 'asset/img/gif/glitter/2.gif');
-            $('#gif2').removeClass('hide').addClass('show');
-            $('#gif3').attr('src', 'asset/img/gif/glitter/3.gif');
-            $('#gif3').removeClass('hide').addClass('show');
-            $('#gif4').attr('src', 'asset/img/gif/glitter/4.gif');
-            $('#gif4').removeClass('hide').addClass('show');
+        if ('glitter' == _val) {
+            $('#gifabsolute').append(
+                '<img id="gif1" class="gifs hide" />' +
+                '<img id="gif2" class="gifs hide" />' +
+                '<img id="gif3" class="gifs hide" />' +
+                '<img id="gif4" class="gifs hide" />'
+            );
+            $('#gif1')
+                .attr('src', 'asset/img/gif/glitter/1.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif2')
+                .attr('src', 'asset/img/gif/glitter/2.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif3')
+                .attr('src', 'asset/img/gif/glitter/3.gif')
+                .removeClass('hide')
+                .addClass('show'),
+            $('#gif4')
+                .attr('src', 'asset/img/gif/glitter/4.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
-        else if ('sad' == _val){
+        else if ('sad' == _val) {
             $('body').addClass('rain');
             // number of drops created.
             var nbDrop = 550; 
@@ -155,103 +167,132 @@ $(document).ready(function() {
 
             // function to generate drops
             function createRain() {
+                for(i = 1; i < nbDrop; i++) {
+                var dropLeft = randRange(0, 1600);
+                var dropTop = randRange(-1000, 1400);
 
-                for( i=1;i<nbDrop;i++) {
-                var dropLeft = randRange(0,1600);
-                var dropTop = randRange(-1000,1400);
-
-                $('.rain').append('<div class="drop" id="drop'+i+'"></div>');
-                $('#drop'+i).css('left',dropLeft);
-                $('#drop'+i).css('top',dropTop);
+                $('.rain').append('<div class="drop" id="drop' + i + '"></div>');
+                $('#drop' + i).css('left', dropLeft);
+                $('#drop' + i).css('top', dropTop);
                 }
-
             }
             // Make it rain
             createRain();
-
-            $('#gif5').attr('src', 'asset/img/gif/sad/1.gif');
-            $('#gif5').removeClass('hide').addClass('show');
-            $('#gif6').attr('src', 'asset/img/gif/sad/2.gif');
-            $('#gif6').removeClass('hide').addClass('show');
-            $('#gif7').attr('src', 'asset/img/gif/sad/3.gif');
-            $('#gif7').removeClass('hide').addClass('show');
+            
+            $('#gifabsolute').append(
+                '<img id="gif5" class="gifs hide" />' +
+                '<img id="gif6" class="gifs hide" />' +
+                '<img id="gif7" class="gifs hide" />'
+            );
+            
+            $('#gif5')
+                .attr('src', 'asset/img/gif/sad/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif6')
+                .attr('src', 'asset/img/gif/sad/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif7')
+                .attr('src', 'asset/img/gif/sad/3.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
-        else if ('happy' == _val){
-            $('#gif8').attr('src', 'asset/img/gif/happy/1.gif');
-            $('#gif8').removeClass('hide').addClass('show');
-            $('#gif9').attr('src', 'asset/img/gif/happy/2.gif');
-            $('#gif9').removeClass('hide').addClass('show');
-            $('#gif10').attr('src', 'asset/img/gif/happy/3.gif');
-            $('#gif10').removeClass('hide').addClass('show');
+        else if ('happy' == _val) {
+            $('#gifabsolute').append(
+                '<img id="gif8" class="gifs hide" />' +
+                '<img id="gif9" class="gifs hide" />' +
+                '<img id="gif10" class="gifs hide" />'
+            );
+            $('#gif8')
+                .attr('src', 'asset/img/gif/happy/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif9')
+                .attr('src', 'asset/img/gif/happy/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif10')
+                .attr('src', 'asset/img/gif/happy/3.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
-        else if ('dancing' == _val){
-            $('#gif11').attr('src', 'asset/img/gif/dancing/1.gif');
-            $('#gif11').removeClass('hide').addClass('show');
-            $('#gif12').attr('src', 'asset/img/gif/dancing/2.gif');
-            $('#gif12').removeClass('hide').addClass('show');
-            $('#gif13').attr('src', 'asset/img/gif/dancing/3.gif');
-            $('#gif13').removeClass('hide').addClass('show');
-            $('#gif14').attr('src', 'asset/img/gif/dancing/4.gif');
-            $('#gif14').removeClass('hide').addClass('show');
+        else if ('dancing' == _val) {
+            $('#gifabsolute').append(
+                '<img id="gif11" class="gifs hide" />' +
+                '<img id="gif12" class="gifs hide" />' +
+                '<img id="gif13" class="gifs hide" />' +
+                '<img id="gif14" class="gifs hide" />'
+            );
+            $('#gif11')
+                .attr('src', 'asset/img/gif/dancing/1.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif12')
+                .attr('src', 'asset/img/gif/dancing/2.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif13')
+                .attr('src', 'asset/img/gif/dancing/3.gif')
+                .removeClass('hide')
+                .addClass('show');
+            $('#gif14')
+                .attr('src', 'asset/img/gif/dancing/4.gif')
+                .removeClass('hide')
+                .addClass('show');
         }
-        else if ('chilling' == _val){
+        else if ('chilling' == _val) {
             
         }
-        else if ('working' == _val){
+        else if ('working' == _val) {
             
         }
-        else if ('sporty' == _val){
+        else if ('sporty' == _val) {
             
         }
-        else if ('sexual' == _val){
+        else if ('sexual' == _val) {
             
         }
-        else if ('travelling' == _val){
+        else if ('travelling' == _val) {
             
         }
-        else if ('gangsta' == _val){
+        else if ('gangsta' == _val) {
             
         }
-        else if ('trendy' == _val){
+        else if ('trendy' == _val) {
             
         }
-        else if ('tgif' == _val){
+        else if ('tgif' == _val) {
             
         }
-        else if ('kawai' == _val){
-            
-            
+        else if ('kawai' == _val) {
+              
         }
-
-
     });
 
-$("#board button")
-  .each(function(i) {
-    if (i != 0) {
-      $("#sound")
-        .clone()
-        .attr("id", "sound" + i)
-        .appendTo($(this).parent());
-    }
-    $(this).data("beep", i);
-  })
-  .mouseenter(function() {
-    console.log($(this).data('beep'))
-    $("#sound" + $(this).data("beep"))[0].play();
-  });
-$("#sound").attr("id", "sound0");
+    $('#board button').each(function(i) {
+        if(i != 0) {
+            $('#sound')
+                .clone()
+                .attr('id', 'sound' + i)
+                .appendTo($(this).parent());
+        }
+        $(this).data('beep', i);
+    }).mouseenter(function() {
+        $('#sound' + $(this).data('beep'))[0].play();
+    });
 
-    
+    $('#sound').attr('id', 'sound0');
+
     $('#return').click(function() {
         $('main').show();
         $('section').addClass('none').hide();
         $('img#rdm').attr('src', '').attr('alt', 'moodtube');
         $('#rs').empty();
         $('body').removeClass();
-        $('header a').css('color', colorBlack);
-        $('#time').css('color', colorBlack);
-        $('#date').css('color', colorBlack);
+        $('header a').css('color', colorRGB[1]);
+        $('#time').css('color', colorRGB[1]);
+        $('#date').css('color', colorRGB[1]);
         playerPlay('pause');
         $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
@@ -263,9 +304,9 @@ $("#sound").attr("id", "sound0");
         $('#heyhey').removeClass('show').addClass('hide');
         $('.gifs').removeClass('show').addClass('hide');
         $('.drop').remove();
+        $('#gifabsolute').empty();
     });
 
-    
     $('#playPause').click(function() {
         if(clickPlay == 1) {
             playerPlay('pause');

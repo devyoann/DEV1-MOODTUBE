@@ -34,8 +34,10 @@ ___
 
 Yoann Di Maria : [@ohyoyo](https://github.com/ohyoyo)
 [![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:dm.yoann@gmail.com) [![Contact](https://img.shields.io/badge/Contact-Site%20Web-54ba4e.svg)](http://yoanndm.fr) [![Contact](https://img.shields.io/badge/Contact-LinkedIn-0084bf.svg)](http://yoanndm.fr)
+
 Thibault Germain : [@Thibgr](https://github.com/Thibgr)
 [![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:thibault.germain7@gmail.com)
+
 Matthieu Vignolle : [@Mayeunaise](https://github.com/Mayeunaise)
 [![Contact](https://img.shields.io/badge/Contact-Mail-lightgray.svg)](mailto:vignolle.matthieu@gmail.com) 
 ---

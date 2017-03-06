@@ -249,11 +249,11 @@ $(document).ready(function() {
             $('#gif15')
                 .attr('src', 'asset/img/gif/chilling/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif16')
                 .attr('src', 'asset/img/gif/chilling/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
         }
         else if ('working' == _val) {
             $('#gifabsolute').append(
@@ -263,11 +263,11 @@ $(document).ready(function() {
             $('#gif17')
                 .attr('src', 'asset/img/gif/working/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif18')
                 .attr('src', 'asset/img/gif/working/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             
         }
         else if ('sporty' == _val) {
@@ -279,19 +279,17 @@ $(document).ready(function() {
             $('#gif19')
                 .attr('src', 'asset/img/gif/sporty/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif20')
                 .attr('src', 'asset/img/gif/sporty/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif21')
                 .attr('src', 'asset/img/gif/sporty/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-
-
-            
+                .addClass('show');
         }
+        
         else if ('sexual' == _val) {
             $('body').addClass('bg_heart');
             $('#gifabsolute').append(
@@ -301,13 +299,13 @@ $(document).ready(function() {
             $('#gif22')
                 .attr('src', 'asset/img/gif/sexual/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif23')
                 .attr('src', 'asset/img/gif/sexual/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-            
+                .addClass('show');
         }
+        
         else if ('travelling' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif24" class="gifs hide" />' +
@@ -317,17 +315,17 @@ $(document).ready(function() {
             $('#gif24')
                 .attr('src', 'asset/img/gif/travel/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif25')
                 .attr('src', 'asset/img/gif/travel/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif26')
                 .attr('src', 'asset/img/gif/travel/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-            
+                .addClass('show');
         }
+        
         else if ('gangsta' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif27" class="gifs hide" />' +
@@ -336,13 +334,13 @@ $(document).ready(function() {
             $('#gif27')
                 .attr('src', 'asset/img/gif/gangsta/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif28')
                 .attr('src', 'asset/img/gif/gangsta/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-            
+                .addClass('show');    
         }
+        
         else if ('trendy' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif29" class="gifs hide" />' +
@@ -352,16 +350,15 @@ $(document).ready(function() {
             $('#gif29')
                 .attr('src', 'asset/img/gif/trendy/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif30')
                 .attr('src', 'asset/img/gif/trendy/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
              $('#gif31')
                 .attr('src', 'asset/img/gif/trendy/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-            
+                .addClass('show');       
         }
         else if ('tgif' == _val) {
             $('#gifabsolute').append(
@@ -371,12 +368,11 @@ $(document).ready(function() {
             $('#gif32')
                 .attr('src', 'asset/img/gif/tgif/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif33')
                 .attr('src', 'asset/img/gif/tgif/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-            
+                .addClass('show');
         }
         else if ('kawai' == _val) {
             $('#gifabsolute').append(
@@ -387,17 +383,17 @@ $(document).ready(function() {
             $('#gif34')
                 .attr('src', 'asset/img/gif/kawai/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif35')
                 .attr('src', 'asset/img/gif/kawai/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif36')
                 .attr('src', 'asset/img/gif/kawai/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
-
+                .addClass('show');
         }
+            
         else if ('rockstar' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif37" class="gifs hide" />' +
@@ -406,13 +402,14 @@ $(document).ready(function() {
             $('#gif37')
                 .attr('src', 'asset/img/gif/rockstar/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif38')
                 .attr('src', 'asset/img/gif/rockstar/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
 
         }
+            
         else if ('jazzy' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif39" class="gifs hide" />' +
@@ -421,12 +418,13 @@ $(document).ready(function() {
             $('#gif39')
                 .attr('src', 'asset/img/gif/jazzy/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif40')
                 .attr('src', 'asset/img/gif/jazzy/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
         }
+            
         else if ('country' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif41" class="gifs hide" />' 
@@ -435,8 +433,9 @@ $(document).ready(function() {
             $('#gif41')
                 .attr('src', 'asset/img/gif/country/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
         }
+            
         else if ('blessed' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif42" class="gifs hide" />' +
@@ -447,20 +446,21 @@ $(document).ready(function() {
             $('#gif42')
                 .attr('src', 'asset/img/gif/blessed/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif43')
                 .attr('src', 'asset/img/gif/blessed/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif44')
                 .attr('src', 'asset/img/gif/blessed/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
             $('#gif45')
                 .attr('src', 'asset/img/gif/blessed/2.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
         }
+            
         else if ('s80' == _val) {
             $('#gifabsolute').append(
                 '<img id="gif46" class="gifs hide" />' 
@@ -468,8 +468,9 @@ $(document).ready(function() {
             $('#gif46')
                 .attr('src', 'asset/img/gif/s80/1.gif')
                 .removeClass('hide')
-                .addClass('show'),
+                .addClass('show');
         }
+            
         else if ('s90' == _val) {
 
         }

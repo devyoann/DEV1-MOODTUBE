@@ -1,8 +1,7 @@
 // connect api Spotify
-//
-//
 var getSPotify = function(id, callback) {
     $.get('http://moodtube.yoanndm.fr/spotify.php', function(jsonP) {
+        // require Token
         var _tokenSpotify = JSON.parse(jsonP),
             _playlistID,
             _userID;
@@ -107,7 +106,6 @@ var getSPotify = function(id, callback) {
                 xhr.setRequestHeader('Authorization', 'Bearer ' + _tokenSpotify.access_token);
             },
             success: function(data) {
-                // data.tracks.items[0].track.artists[0].name
                 callback(data);
             },
             error: function(err) {
@@ -118,8 +116,6 @@ var getSPotify = function(id, callback) {
 }
 
 // connect api Giphy
-//
-//
 var getGiphy = function(id, callback) {
     var _stepKeyGihpy = 'dc6zaTOxFJmzC';
     var idGiphy = function(id) {

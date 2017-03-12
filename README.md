@@ -1,4 +1,4 @@
-![Banner](http://ecole-webstart.com/wp-content/uploads/2016/02/geek-ecole-webstart.jpg)
+![Banner](http://thibgr.fr/images/BannerMoodTube.gif)
 ## MOODTUBE
 
 Yoann Di Maria - development student at [Webstart][1].

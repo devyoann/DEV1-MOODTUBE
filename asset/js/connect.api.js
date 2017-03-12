@@ -23,8 +23,8 @@ var getSPotify = function(id, callback) {
             _playlistID = '7b9XqnXw5J47tmn0Y0IZeW';
         }
         else if(id == 'dancing') {
-            _userID = 'playlists.germany';
-            _playlistID = '668SIuEbkgfMkpciwqLr2Wg';
+            _userID = 'spotify';
+            _playlistID = '5rJNwG9BImUMYDrN5D3aUi';
         }
         else if(id == 'working') {
             _userID = 'spotify_france';

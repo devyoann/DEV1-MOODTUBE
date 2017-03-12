@@ -768,6 +768,9 @@ h2#sec-name {
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     padding: 17px 25px;
+    display: flex;
+    height: 50px;
+    align-items: center;
 }
 
 #playPause {
@@ -790,15 +793,14 @@ h2#sec-name {
     background-repeat: no-repeat;
 }
 
-#progressBar {
-    height: 4px;
+#songName {
     width: 360px;
+    height: 40px;
     border-radius: 2px;
-    background-color: black;
     opacity: 0.5;
     margin-right: 18px;
-    display: inline-block;
     position: relative;
+    flex-grow: 1;
 }
 
 #next {
@@ -816,43 +818,11 @@ h2#sec-name {
     cursor: pointer;
     height: 36px;
     width: 47px;
-    margin-top: 5px;
     margin-right: 12px;
     display: inline-block;
     background-repeat: no-repeat;
 }
 
-#soundBar {
-    height: 4px;
-    width: 120px;
-    border-radius: 2px;
-    background-color: black;
-    opacity: 0.5;
-    margin-right: 27px;
-    display: inline-block;
-    position: relative;
-}
-
-#grabPB, #grabSB {
-    cursor: pointer;
-    height: 30px;
-    width: 6px;
-    border-radius: 3px;
-    background-color: black;
-    position: absolute;
-    opacity: 1;
-    top: -27px;
-}
-
-#playlist {
-    background-image: url('../img/list.svg');
-    cursor: pointer;
-    height: 35px;
-    width: 32px;
-    margin-right: 12px;
-    display: inline-block;
-    background-repeat: no-repeat;
-}
 
 /* IMG */
 

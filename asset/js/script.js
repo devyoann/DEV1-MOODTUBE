@@ -108,7 +108,7 @@ $(document).ready(function() {
         }
     
         $('#previous, #next').click(queues);
-
+        
         // get Giphy api and execute function
         getGiphy(dataSearch, function(data){
             var gifAnim = function() {
@@ -518,12 +518,16 @@ $(document).ready(function() {
 
     });
 
+    
+    
     $('#playPause').click(function() {
+        
         if(clickPlay == 1) {
             playerPlay('pause');
             clickPlay = 0;
             $(this).css('background-image', 'url(asset/img/play.svg)');
         }
+        
         else if(clickPlay == 0) {
             playerPlay('play');
             clickPlay = 1;

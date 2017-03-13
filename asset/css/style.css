@@ -1087,6 +1087,83 @@ h2#sec-name {
     transform: rotate(10deg);
 }
 
+/*TRAVEL*/
+#gif24{
+    position: absolute;
+    top: 270px;
+    left: -100px;
+    height: 200px;
+}
+
+#gif25{
+    position: absolute;
+    top: -90px;
+    right: 100px;
+}
+
+#gif26{
+    position: absolute;
+    top: 300px;
+    right: -300px;
+    height: 500px;
+    transform: rotate(10deg);
+}
+
+/*GANGSTA*/
+#gif27{
+    position: absolute;
+    top: 470px;
+    right: -100px;
+    height: 200px;
+    transform: rotate(-25deg);
+}
+
+#gif28{
+    position: absolute;
+    top: -90px;
+    right: 100px;
+}
+
+
+/*TREND*/
+
+#gif29{
+    position: absolute;
+    top: 0px;
+    left: 340px;
+    height: 100px;
+}
+
+#gif30{
+    position: absolute;
+    top: 300px;
+    right: -150px;
+}
+
+#gif31{
+    position: absolute;
+    top: 300px;
+    left: -150px;
+    transform: rotate(10deg);
+}
+
+/*TGIF*/
+
+#gif32{
+    position: absolute;
+    top: 20px;
+    right: -150px;
+    transform: rotate(20deg)
+}
+
+#gif33{
+    position: absolute;
+    top: 300px;
+    left: -250px;
+    transform: rotate(-20deg);
+}
+
+
 /* KAWAI GIF */
 
 #gif34{
@@ -1129,6 +1206,30 @@ h2#sec-name {
     transform: rotate(10deg);
 }
 
+/* JAZZY */
+
+#gif39{
+    position: absolute;
+    top: -80px;
+    left: 350px;
+    height: 170px;
+}
+
+#gif40{
+    position: absolute;
+    top: 350px;
+    right: -100px;
+}
+
+/* COUNTRY */
+
+#gif41{
+    position: absolute;
+    top: -80px;
+    left: 350px;
+    height: 170px;
+}
+
 /* BLESSED GIF */
 
 #gif42{
@@ -1158,6 +1259,15 @@ h2#sec-name {
     top: 100px;
     right: -275px;
     height: 125px;
+}
+
+/* COUNTRY */
+
+#gif46{
+    position: absolute;
+    top: 280px;
+    right: -100px;
+    transform: rotate(-15deg);
 }
 
 

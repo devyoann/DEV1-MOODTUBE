@@ -338,7 +338,7 @@ $(document).ready(function() {
                 .removeClass('hide')
                 .addClass('show');
             $('#gif26')
-                .attr('src', 'asset/img/gif/travel/2.gif')
+                .attr('src', 'asset/img/gif/travel/3.gif')
                 .removeClass('hide')
                 .addClass('show');
         }
@@ -373,7 +373,7 @@ $(document).ready(function() {
                 .removeClass('hide')
                 .addClass('show');
              $('#gif31')
-                .attr('src', 'asset/img/gif/trendy/2.gif')
+                .attr('src', 'asset/img/gif/trendy/3.gif')
                 .removeClass('hide')
                 .addClass('show');       
         }

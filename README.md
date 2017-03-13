@@ -19,7 +19,9 @@ Then open `index.html` in Safari by preference. It might have some bugs with oth
 
 ### Progress
 
-**V1** is coming soon..
+**V1** 
+[Doc](https://drive.google.com/file/d/0B8oBalIhC-nEVDloVTVxZ3djMHc/view?usp=sharing)
+[Trello](https://trello.com/b/Zv2YyAJg)
 
 ### Scoring
 

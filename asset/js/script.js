@@ -8,7 +8,8 @@ $(document).ready(function() {
         IntervalGifAnim,
         lestP,
         dataR,
-        musicNext;
+        musicNext,
+        noNext = 0;
     
     // function public
     var randomInt = function(int) {
@@ -50,9 +51,11 @@ $(document).ready(function() {
             i,
             shareUrl = url + '#' + _val,
             tracks = [],
+            tracksName = [],
+            ArtistName = [],
             el,
             max;
-
+        // open page and function
         $('main').hide();
         $('section').removeClass('none').addClass(_val).attr('id', _val);
         $('body').addClass('section ' + _val);
@@ -62,8 +65,8 @@ $(document).ready(function() {
         $('#sec-name').text($(this).text());
         $('.fb-share-button').attr('data-href', shareUrl);
         $('.twitter-share-button').attr('href', shareUrl);
-        // get Spotify api and execute function
         
+        // get Spotify api and execute function
         getSPotify(_val, function(data) {
             console.log(data);
             var datalenght = data.tracks.items.length,
@@ -73,15 +76,23 @@ $(document).ready(function() {
                 el = randomInt(datalenght);
                     
                 for(var q = 0; q < datalenght; q++) {
-                    if(data.tracks.items[q].track.preview_url != null)
+                    if(data.tracks.items[q].track.preview_url != null) {
                         tracks.push(data.tracks.items[q].track.preview_url);
+                        tracksName.push(data.tracks.items[q].track.name);
+                        ArtistName.push(data.tracks.items[q].track.artists[0].name);
+                    }
                 }
                 
+                var nae = tracksName[el];
+                var ars = ArtistName[el];
                 var son = tracks[el];
                 $('audio').attr('src', son);
                 $('source').attr('src', son);
-                
-                playerPlay('play');
+                $('#songName').text(nae);
+                $('#artistName').text(ars);
+                    if(noNext == 0) {
+                    playerPlay('play'); 
+                }
             }
             
             playerNext();
@@ -93,6 +104,7 @@ $(document).ready(function() {
             
             var d = 118 % pv;
             $('#grabSB').css('left', d);
+            $('#songName').text(nae);
         });
         
         var queues = function() {
@@ -102,9 +114,14 @@ $(document).ready(function() {
                 el = el < max ? el+1 : max;     
 
             son = tracks[el];
+            nae = tracksName[el];
+            ars = ArtistName[el];
+            
             $('audio').attr('src', son);
             $('source').attr('src', son);
             playerPlay('play');
+            $('#songName').text(nae);
+            $('#artistName').text(ars);
         }
     
         $('#previous, #next').click(queues);
@@ -504,6 +521,7 @@ $(document).ready(function() {
         $('#time').css('color', colorRGB[1]);
         $('#date').css('color', colorRGB[1]);
         playerPlay('pause');
+        $('#songName').empty();
         $('#sec-name').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('#player').css('backgroundColor', 'rgba(0, 0, 0, 0.3)');
         $('.cls-2').css('fill', '#000');
@@ -521,16 +539,17 @@ $(document).ready(function() {
     
     
     $('#playPause').click(function() {
-        
         if(clickPlay == 1) {
             playerPlay('pause');
             clickPlay = 0;
+            noNext = 1;
             $(this).css('background-image', 'url(asset/img/play.svg)');
         }
         
         else if(clickPlay == 0) {
             playerPlay('play');
             clickPlay = 1;
+            noNext = 2;
             $(this).css('background-image', 'url(asset/img/pause.svg)');
         }
     });

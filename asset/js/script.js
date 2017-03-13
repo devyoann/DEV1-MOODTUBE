@@ -277,15 +277,15 @@ $(document).ready(function() {
                 '<img id="gif21" class="gifs hide" />'
             );
             $('#gif19')
-                .attr('src', 'asset/img/gif/sporty/1.gif')
+                .attr('src', 'asset/img/gif/sport/1.gif')
                 .removeClass('hide')
                 .addClass('show');
             $('#gif20')
-                .attr('src', 'asset/img/gif/sporty/2.gif')
+                .attr('src', 'asset/img/gif/sport/2.gif')
                 .removeClass('hide')
                 .addClass('show');
             $('#gif21')
-                .attr('src', 'asset/img/gif/sporty/2.gif')
+                .attr('src', 'asset/img/gif/sport/3.gif')
                 .removeClass('hide')
                 .addClass('show');
         }
@@ -389,7 +389,7 @@ $(document).ready(function() {
                 .removeClass('hide')
                 .addClass('show');
             $('#gif36')
-                .attr('src', 'asset/img/gif/kawai/2.gif')
+                .attr('src', 'asset/img/gif/kawai/3.gif')
                 .removeClass('hide')
                 .addClass('show');
         }
@@ -452,11 +452,11 @@ $(document).ready(function() {
                 .removeClass('hide')
                 .addClass('show');
             $('#gif44')
-                .attr('src', 'asset/img/gif/blessed/2.gif')
+                .attr('src', 'asset/img/gif/blessed/3.gif')
                 .removeClass('hide')
                 .addClass('show');
             $('#gif45')
-                .attr('src', 'asset/img/gif/blessed/2.gif')
+                .attr('src', 'asset/img/gif/blessed/4.gif')
                 .removeClass('hide')
                 .addClass('show');
         }

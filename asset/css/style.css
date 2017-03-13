@@ -907,7 +907,7 @@ h2#sec-name {
 #gif5{
    bottom: -100px;
    width: 600px;
-   left: -300px;
+   left: -350px;
    position: absolute;
 }
 #gif6{
@@ -920,7 +920,7 @@ h2#sec-name {
 
 #gif7 {
     bottom: -30px;
-    right: -20px;
+    right: -220px;
     width: 350px;
     position: absolute;
     transform: rotate(-15deg);
@@ -951,19 +951,19 @@ h2#sec-name {
 #gif8{
     position: absolute;
     top: -98px;
-    left: 600px;
+    left: 500px;
 }
 
 #gif9{
     position: absolute;
     height: 350px;
     bottom: 0px;
-    left: -200px;
+    left: -250px;
 }
 
 #gif10{
     position: absolute;
-    right: -150px;
+    right: -300px;
     bottom: -78px;
     height: 750px;
 }
@@ -972,23 +972,39 @@ h2#sec-name {
 
 #gif11{
     position: absolute;
-    bottom: -105px;
-    left: 300px;
-    height: 250px;
+    top: -122px;
+    left: 575px;
+    height: 215px;
+    -webkit-animation : move 10s linear infinite;
+}
+
+@-webkit-keyframes move {
+    0%  { top: -122px; left: 575px;  }
+    10% { top: -122px; left: 525px;  }
+    20% { top: -122px; left: 475px;  }
+    30% { top: -122px; left: 425px;  }
+    40% { top: -122px; left: 375px;  }
+    49% { top: -122px; left: 325px;  }
+    50% { top: -122px; left: 325px;  }
+    60% { top: -122px; left: 375px;  }
+    70% { top: -122px; left: 425px;  }
+    80% { top: -122px; left: 475px;  }
+    90% { top: -122px; left: 525px;  }
+    100%{ top: -122px; left: 575px;  }
 }
 
 #gif12{
     position: absolute;
-    top: 180px;
-    right: -150px;
-    height: 300px;
+    bottom: -100px;
+    right: -300px;
+    height: 500px;
 }
 
 #gif13{
     position: absolute;
-    top: -80px;
-    right: 160px;
-    width: 150px;
+    bottom: -160px;
+    right: 300px;
+    width: 230px;
 }
 
 #gif14{
@@ -998,26 +1014,150 @@ h2#sec-name {
     width: 300px
 }
 
-/* DANCING GIF */
+/* CHILLING GIF */
 
-#gif{
+#gif15{
     position: absolute;
+    left: 325px;
+    top: -101px;
 }
 
-#gif{
+#gif16{
     position: absolute;
+    left: 600px;
+    transform: rotate(-12deg);
+    bottom: 0px;
 }
 
-#gif{
+/* WORKING GIF */
 
+#gif17{
+    position: absolute;
+    top: 200px;
+    right: -300px;
+    height: 270px;
+    transform: rotate(-25deg);
 }
 
-#gif{
-
+#gif18{
+    position: absolute;
+    top: 240px;
+    left: -300px;
+    height: 400px;
+    transform: rotate(15deg);
 }
 
-#gif{
+/* SPORTY GIF */
 
+#gif19{
+    position: absolute;
+    top: 200px;
+    right: -300px;
+    height: 530px;
+}
+
+#gif20{
+    position: absolute;
+    top: -101px;
+    left: 400px;
+    height: 200px;
+}
+
+#gif21{
+    position: absolute;
+    top: 240px;
+    left: -300px;
+    height: 450px;
+}
+
+/* SEXUAL GIF */
+
+#gif22{
+    position: absolute;
+    top: -105px;
+    left: 700px;
+    height: 200px;
+}
+
+#gif23{
+    position: absolute;
+    top: 300px;
+    right: -300px;
+    height: 500px;
+    transform: rotate(10deg);
+}
+
+/* KAWAI GIF */
+
+#gif34{
+    position: absolute;
+    top: -110px;
+    left: 400px;
+    height: 200px;
+}
+
+#gif35{
+    position: absolute;
+    top: 300px;
+    right: -275px;
+    height: 500px;
+    transform: rotate(15deg);
+}
+
+#gif36{
+    position: absolute;
+    top: 300px;
+    left: -300px;
+    height: 300px;
+    transform: rotate(10deg);
+}
+
+/* ROCKSTARS GIF */
+
+#gif37{
+    position: absolute;
+    top: -80px;
+    left: 400px;
+    height: 170px;
+}
+
+#gif38{
+    position: absolute;
+    top: 450px;
+    right: -275px;
+    height: 300px;
+    transform: rotate(10deg);
+}
+
+/* BLESSED GIF */
+
+#gif42{
+    position: absolute;
+    top: 300px;
+    left: -250px;
+    height: 300px;
+}
+
+#gif43{
+    position: absolute;
+    top: 520px;
+    right: -275px;
+    height: 120px;
+    transform: rotate(-10deg);
+}
+
+#gif44{
+    position: absolute;
+    top: 7px;
+    left: 327px;
+    height: 75px;
+}
+
+#gif45{
+    position: absolute;
+    top: 100px;
+    right: -275px;
+    height: 125px;
 }
 
 

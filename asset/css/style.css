@@ -793,7 +793,7 @@ h2#sec-name {
     background-repeat: no-repeat;
 }
 
-#songName {
+#viewName {
     width: 360px;
     height: 40px;
     border-radius: 2px;
@@ -801,8 +801,38 @@ h2#sec-name {
     margin-right: 18px;
     position: relative;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: "Avenir Next";
+	overflow: hidden;
+	table-layout: fixed;
+    
+}
+@-webkit-keyframes marqueelike {
+ 	0%, 100% {margin-left:0;}
+ 	99.99% {margin-left:-100%;}
+ }
+
+.defile {
+    display: inline-flex;
+	-webkit-animation:linear marqueelike 10s infinite ;
+	-moz-animation:linear marqueelike 10s infinite ;
+	-o-animation:linear marqueelike 10s infinite ;
+	-ms-animation:linear marqueelike 10s infinite ;
+	animation:linear marqueelike 10s infinite ;
 }
 
+#songName {
+    font-weight: 500;
+}
+
+#artistName {
+    font-weight: 700;
+}
 #next {
     background-image: url('../img/nextSong.svg');
     cursor: pointer;

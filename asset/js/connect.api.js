@@ -1,6 +1,6 @@
 // connect api Spotify
 var getSPotify = function(id, callback) {
-    $.get('http://moodtube.yoanndm.fr/spotify.php', function(jsonP) {
+    $.get('http://matthieuvignolle.fr/spotify.php', function(jsonP) {
         // require Token
         var _tokenSpotify = JSON.parse(jsonP),
             _playlistID,
